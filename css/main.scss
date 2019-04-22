@@ -1,0 +1,765 @@
+
+$secondary:rgb(231,162,32);
+$primary:rgb(25, 25, 25);
+$lightPrimary : lighten($primary,50%);
+// $darkPrimary: 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Merriweather', serif;
+    font-size: .9rem;
+}
+
+.secondary{
+    color: $secondary;
+}
+
+
+// start of header section
+
+.header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right top, rgba(40, 40, 40, 0.8), rgba(40, 40, 40, 0.8)), url("../images/architecture-boy-buildings-307847.jpg");
+    background-size: cover;
+    position: relative;
+    color: #fff;
+
+    .borderBox{
+        position: absolute;
+        height: 40vh;
+        width: 40vh;
+        border: 1vh solid $secondary;
+        z-index: 1;
+        left: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transform: translate(-50%,-50%) rotate(-45deg);
+
+        .content{
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            transform: translate(-35%,40%) rotate(45deg);
+
+            .line{
+                height: .5vh;
+                width: 60%;
+                margin: .5rem auto .8rem auto;
+                background: #fff;
+            }
+                
+            .icons{
+                font-size: 1rem;
+                font-weight: 100;
+
+                i{
+                    height: 5vh;
+                    width: 5vh;
+                    line-height: 5vh;
+                    border: .3vh solid #fff;
+                    border-radius: 50%;
+                }
+            }
+            
+        }
+    }
+
+    //  navbar section
+
+    .navbar{
+        position: fixed;
+        width: 100%;
+        height: 5em;
+        z-index: 50;
+        transition: all .2s ease;
+
+        .navbar-brand{
+            width: 20%;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 500;
+            text-align: center;
+            display: none;
+        }
+
+        .navbar-nav{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: row;
+
+            .space{
+                width: 20%;
+            }
+
+            a{
+                text-transform: capitalize;
+                letter-spacing: .15rem;
+                color: rgb(202, 202, 202);
+                transition: all .5s ease;
+
+                &:hover{
+                    color: #fff;
+                    border-top: 2px solid $secondary;
+                    border-bottom: 2px solid $secondary;
+                }
+            }
+        }
+    }
+
+    .navbar-bg{
+        background: linear-gradient(to top, #999999ee, #191919ee);
+    }
+
+    // end of navbar section
+
+    // start of heading section
+
+    .heading{
+        position: absolute;
+        width: 90%;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+
+        h1{
+            font-family: 'Russo One', sans-serif;
+            font-size: 4rem;
+            font-weight: 500;
+            letter-spacing: 1rem;
+            text-transform: uppercase;
+        }
+
+        p{
+            margin: 3rem auto;
+        }
+
+        .btn{
+            width: 30vh;
+            margin: 2rem auto;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: .15rem;
+            background: $secondary;
+            color: #fff;
+            border-radius: 3vh;
+
+            &:hover{
+                background: $primary;
+            }
+        }
+    }
+
+    // end of heading section
+}
+
+// shared css
+
+.description{
+    margin-left:20vh;
+    padding-top: 10vh;
+    
+    h1{
+        color: $primary;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 3vh;
+    }
+
+    .line{
+        height: .8vh;
+        width: 50%;
+        background: $secondary;
+    }
+
+    p{
+        color: $primary;
+        margin: 3vh 0;
+    }
+}
+
+.gridContent{
+    .icon{
+        color: $secondary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h5{
+        // margin-bottom: 0;
+        color: #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    p{
+        margin-top: 0;
+        color: $lightPrimary;
+    }
+}
+
+
+// start of creative team section
+
+.creativeTeam{
+    display: grid;
+    grid-template-columns: 30% auto;
+    min-height: 90vh;
+    overflow: hidden;
+
+    .ourCreativeTeam{
+        // margin-left:20vh;
+        // padding-top: 5vh;
+        
+        // h1{
+        //     color: $primary;
+        //     font-weight: bold;
+        //     text-transform: uppercase;
+        //     margin-bottom: 3vh;
+        // }
+
+        // .line{
+        //     height: .8vh;
+        //     width: 50%;
+        //     background: $secondary;
+        // }
+
+        // p{
+        //     color: $primary;
+        //     margin: 3vh 0;
+        // }
+    }
+
+    .creativeTeamGallery{
+        position: relative;
+        transform:translate(10%,-5%) rotate(-45deg);
+       
+
+        .image, .borderBox{
+            position: absolute;
+            height: 47vh;
+            width: 47vh;
+            top: 50%;
+            left: 50%;
+        }
+
+        .image{
+            border: .5vh solid $secondary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .borderBox{
+            transform: translate(-10%,-160%);
+            border: 2vh solid lighten($secondary, 20%);
+        }
+
+        img{
+            height: 130%;
+            width: 150%;
+            transform: rotate(45deg);
+        }
+
+        .img1{
+            transform: translate(-160%,-50%);
+        }
+
+        .img2{
+            transform: translate(-50%,-50%);
+        }
+
+        .img3{
+            transform: translate(60%,-50%);
+        }
+
+        .img4{
+            transform: translate(-50%,60%);
+        }
+    }
+}
+
+// end of creative team section
+
+// start of our best team section
+
+.bestTeam{
+    background: $primary;
+    display: grid;
+    grid-template-columns: 30% auto;
+    min-height: 100vh;
+
+    .ourBestTeam{
+        // margin-left:20vh;
+        // padding-top: 5vh;
+        
+        h1{
+            color: #fff;
+        //     font-weight: bold;
+        //     text-transform: uppercase;
+        //     margin-bottom: 3vh;
+        }
+
+        // .line{
+        //     height: .8vh;
+        //     width: 50%;
+        //     background: $secondary;
+        // }
+
+        p{
+            color: #fff;
+        //     margin: 3vh 0;
+        }
+    }
+
+    .teamGallery{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 5vh;
+
+        .member{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            img{
+                height: 70%;
+                width: 70%
+            }
+            h5{
+                margin: 2vh auto 1vh auto;
+                color: $secondary;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            p{
+                margin-top: 0;
+                color: $lightPrimary;
+                // transform: translateY(-5%);
+            }
+        }
+    }
+}
+
+// end of our best team section
+
+
+// start of our best work section
+
+.ourWork{
+    display: grid;
+    grid-template-columns: 30% auto;
+    min-height: 100vh;
+
+    .ourCreativeWork{
+        // margin-left:20vh;
+        // padding-top: 5vh;
+        
+        // h1{
+        //     color: $primary;
+        //     font-weight: bold;
+        //     text-transform: uppercase;
+        //     margin-bottom: 3vh;
+        // }
+
+        // .line{
+        //     height: .8vh;
+        //     width: 50%;
+        //     background: $secondary;
+        // }
+
+        // p{
+        //     color: $primary;
+        //     margin: 3vh 0;
+        // }
+
+        .btn{
+            height: 5h;
+            width: 30vh;
+            padding: auto auto;
+            font-size: 2.5vh;
+            font-weight: bold;
+            letter-spacing: .2vh;
+            background: $secondary;
+            color: #fff;
+            border-radius: 3vh;
+        }
+    }
+
+    .gallery{
+        position: relative;
+
+        .img1{
+            position: absolute;
+            height: 50%;
+            width: 60%;
+            right: 32.5%;
+            top: 2.5%;
+        }
+
+        .img2{
+            position: absolute;
+            height: 30%;
+            width: 30%;
+            right: 0;
+            top: 2.5%;
+        }
+
+        .img3{
+            position: absolute;
+            height: 65%;
+            width: 30%;
+            right: 0;
+            bottom: 0;
+        }
+
+        .img4{
+            position: absolute;
+            height: 42.5%;
+            width: 50%;
+            right: 32.5%;
+            bottom: 2.5%;
+        }
+    }
+}
+
+// end of our best work section
+
+// start of why choose us section
+
+.chooseUs{
+    background: $primary;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    min-height: 90vh;
+    .photo{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        img{
+            height: 90%;
+            width: 100%;
+        }
+    }
+    .whyChooseUs{
+        margin: 0 10vh;
+        // padding-top: 5vh;
+        
+        h1{
+            color: #fff;
+        //     font-weight: bold;
+        //     text-transform: uppercase;
+        //     margin-bottom: 3vh;
+        }
+
+        // .line{
+        //     height: .8vh;
+        //     width: 50%;
+        //     background: $secondary;
+        // }
+
+        .whyChooseUsContent{
+            display: grid;
+            grid-template-columns: 20% 80%;
+            justify-content: center;
+            margin: 3vh 0;
+
+            .icon{
+                justify-content: start;
+            //     color: $secondary;
+            //     display: flex;
+            //     align-items: center;
+            }
+
+            // h5{
+            //     margin-bottom: 0;
+            //     color: #fff;
+            //     font-size: 1.2rem;
+            //     text-transform: uppercase;
+            //     font-weight: bold;
+            // }
+
+            // p{
+            //     margin-top: 0;
+            //     color: $lightPrimary;
+            // }
+        }
+    }
+}
+
+// end of why choose us section
+
+// start of our best service section
+
+.ourService{
+    display: grid;
+    grid-template-columns: 40% auto;
+    min-height: 100vh;
+    .ourBestService{
+        margin:0 20vh;
+        // padding-top: 5vh;
+        text-align: end;
+        
+        // h1{
+        //     color: $primary;
+        //     font-weight: bold;
+        //     text-transform: uppercase;
+        //     margin-bottom: 3vh;
+        // }
+
+        .line{
+            float: right;
+        //     height: .8vh;
+        //     width: 50%;
+        //     background: $secondary;
+        }
+
+        p{
+        //     color: $primary;
+            margin: 6.8vh 0;
+        }
+    }
+
+    .ourServicePhoto{
+        background: url("../images/camera-coffee-composition-1509428.jpg") center center ;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        .ourServiceDesc{
+            height: 80%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            background: $primary;
+            transform: translateX(-10%);
+
+            .descContent{
+                text-align: center;
+
+                .icon{
+                    color: #fff;
+                    margin: 2vh auto; 
+                }
+
+                .icon-border{
+                    height: 10vh;
+                    width: 10vh;
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
+                    border: .5vh solid #fff;
+                    border-radius: 50%;
+                }
+
+                .text{
+                    width: 80%;
+                    margin: 0 auto;
+                }
+    
+                h5{
+                //     margin-bottom: 0;
+                    color: $secondary;
+                //     font-size: 1.1rem;
+                //     text-transform: uppercase;
+                //     font-weight: bold;
+                }
+    
+                // p{
+                //     margin-top: 0;
+                //     color: $lightPrimary;
+                // }
+            }
+        }
+    }
+}
+
+// end of our best service section
+
+// start of our client say section
+
+.ourClient{
+    display: grid;
+    grid-template-columns: 35% auto 35%;
+    min-height: 80vh;
+    background: $primary;
+
+    .ourClientSay{
+        margin:0 5vh 0 20vh;
+        // padding-top: 5vh;
+        
+        h1{
+            color: #fff;
+        //     font-weight: bold;
+        //     text-transform: uppercase;
+        //     margin-bottom: 3vh;
+        }
+
+        // .line{
+        //     height: .8vh;
+        //     width: 50%;
+        //     background: $secondary;
+        // }
+
+        p{
+            color: #fff;
+        //     margin: 3vh 0;
+        }
+    }
+
+    .clientPhoto{
+        background: url("../images/adult-agreement-beard-541522.jpg") center center;
+        background-size: cover;
+    }
+
+    .clientComment{
+        background: #fff;
+        display: flex;
+        align-items: center;
+
+        .container{
+            width: 55%;
+            text-align: center;
+            
+            i{
+                color: $secondary;
+            }
+        }
+        .carousel-indicators{
+            top: 100%;
+        }
+        .carousel-indicators li{
+            background-color: $primary;
+        }
+
+        .carousel-indicators .active{
+            background-color: $secondary;
+        }
+    }
+}
+
+// end of our client say section
+
+// start of get in touch section
+
+.getInTouch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    background-image: linear-gradient(to right top, rgba(49, 49, 49, 0.8), rgba(48, 48, 48, 0.8)), url("../images/mihail-macri-541060-unsplash.jpg");
+    background-size: cover;
+
+    .getInTouchIcons{
+        width: 70%;
+        text-align: center;
+
+        h1{
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5vh;
+        }
+        .mediaIcons{
+            font-size: 3vh;
+            font-weight: 100;
+            display: flex;
+            justify-content: space-around;
+
+            i{
+                margin: 5vh auto;
+                color: #fff;
+                height: 8vh;
+                width: 8vh;
+                line-height: 8vh;
+                border: .3vh solid #fff;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+// end of get in touch section
+
+// start of footer section
+
+.footer{
+    min-height: 60vh;
+    background: $primary;
+    position: relative;
+    overflow: hidden;
+
+    .footerContent{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 80%;
+        margin: 5vh auto;
+
+        .f-content{
+            display: grid;
+            grid-template-columns: 20% 80%;
+            justify-content: center;
+            margin: 3vh 0;
+
+            // .icon{
+            //     color: $secondary;
+            //     display: flex;
+            //     align-items: center;
+            // }
+
+            // h5{
+            //     margin-bottom: 0;
+            //     font-size: 1.2rem;
+            //     color: #fff;
+            //     text-transform: uppercase;
+            //     font-weight: bold;
+            // }
+
+            // p{
+            //     margin-top: 0;
+            // }
+
+            ul li{
+                color: $lightPrimary;
+                list-style: none;
+            }
+        }
+    }
+
+
+    .borderBox{
+        position: absolute;
+        height: 40vh;
+        width: 40vh;
+        border: 1vh solid $secondary;
+        z-index: 1;
+        left: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transform: translate(-50%,30%) rotate(-45deg);
+
+        .content{
+            color: #fff;
+            text-align: center;
+            font-size: 2.5vh;
+            transform: translate(35%,-100%) rotate(45deg);
+        }
+    }
+}
+
+// end of footer section

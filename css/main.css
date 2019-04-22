@@ -1,0 +1,686 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  font-size: .9rem;
+}
+
+.secondary {
+  color: #e7a220;
+}
+
+.header {
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(40, 40, 40, 0.8)), to(rgba(40, 40, 40, 0.8))), url("../images/architecture-boy-buildings-307847.jpg");
+  background-image: linear-gradient(to right top, rgba(40, 40, 40, 0.8), rgba(40, 40, 40, 0.8)), url("../images/architecture-boy-buildings-307847.jpg");
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.header .borderBox {
+  position: absolute;
+  height: 40vh;
+  width: 40vh;
+  border: 1vh solid #e7a220;
+  z-index: 1;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.header .borderBox .content {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  -webkit-transform: translate(-35%, 40%) rotate(45deg);
+          transform: translate(-35%, 40%) rotate(45deg);
+}
+
+.header .borderBox .content .line {
+  height: .5vh;
+  width: 60%;
+  margin: .5rem auto .8rem auto;
+  background: #fff;
+}
+
+.header .borderBox .content .icons {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.header .borderBox .content .icons i {
+  height: 5vh;
+  width: 5vh;
+  line-height: 5vh;
+  border: .3vh solid #fff;
+  border-radius: 50%;
+}
+
+.header .navbar {
+  position: fixed;
+  width: 100%;
+  height: 5em;
+  z-index: 50;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.header .navbar .navbar-brand {
+  width: 20%;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  display: none;
+}
+
+.header .navbar .navbar-nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header .navbar .navbar-nav .space {
+  width: 20%;
+}
+
+.header .navbar .navbar-nav a {
+  text-transform: capitalize;
+  letter-spacing: .15rem;
+  color: #cacaca;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.header .navbar .navbar-nav a:hover {
+  color: #fff;
+  border-top: 2px solid #e7a220;
+  border-bottom: 2px solid #e7a220;
+}
+
+.header .navbar-bg {
+  background: -webkit-gradient(linear, left bottom, left top, from(#999999ee), to(#191919ee));
+  background: linear-gradient(to top, #999999ee, #191919ee);
+}
+
+.header .heading {
+  position: absolute;
+  width: 90%;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header .heading h1 {
+  font-family: 'Russo One', sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+}
+
+.header .heading p {
+  margin: 3rem auto;
+}
+
+.header .heading .btn {
+  width: 30vh;
+  margin: 2rem auto;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: .15rem;
+  background: #e7a220;
+  color: #fff;
+  border-radius: 3vh;
+}
+
+.header .heading .btn:hover {
+  background: #191919;
+}
+
+.description {
+  margin-left: 20vh;
+  padding-top: 10vh;
+}
+
+.description h1 {
+  color: #191919;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 3vh;
+}
+
+.description .line {
+  height: .8vh;
+  width: 50%;
+  background: #e7a220;
+}
+
+.description p {
+  color: #191919;
+  margin: 3vh 0;
+}
+
+.gridContent .icon {
+  color: #e7a220;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gridContent h5 {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.gridContent p {
+  margin-top: 0;
+  color: #999999;
+}
+
+.creativeTeam {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% auto;
+      grid-template-columns: 30% auto;
+  min-height: 90vh;
+  overflow: hidden;
+}
+
+.creativeTeam .creativeTeamGallery {
+  position: relative;
+  -webkit-transform: translate(10%, -5%) rotate(-45deg);
+          transform: translate(10%, -5%) rotate(-45deg);
+}
+
+.creativeTeam .creativeTeamGallery .image, .creativeTeam .creativeTeamGallery .borderBox {
+  position: absolute;
+  height: 47vh;
+  width: 47vh;
+  top: 50%;
+  left: 50%;
+}
+
+.creativeTeam .creativeTeamGallery .image {
+  border: 0.5vh solid #e7a220;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.creativeTeam .creativeTeamGallery .borderBox {
+  -webkit-transform: translate(-10%, -160%);
+          transform: translate(-10%, -160%);
+  border: 2vh solid #f1c87c;
+}
+
+.creativeTeam .creativeTeamGallery img {
+  height: 130%;
+  width: 150%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.creativeTeam .creativeTeamGallery .img1 {
+  -webkit-transform: translate(-160%, -50%);
+          transform: translate(-160%, -50%);
+}
+
+.creativeTeam .creativeTeamGallery .img2 {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.creativeTeam .creativeTeamGallery .img3 {
+  -webkit-transform: translate(60%, -50%);
+          transform: translate(60%, -50%);
+}
+
+.creativeTeam .creativeTeamGallery .img4 {
+  -webkit-transform: translate(-50%, 60%);
+          transform: translate(-50%, 60%);
+}
+
+.bestTeam {
+  background: #191919;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% auto;
+      grid-template-columns: 30% auto;
+  min-height: 100vh;
+}
+
+.bestTeam .ourBestTeam h1 {
+  color: #fff;
+}
+
+.bestTeam .ourBestTeam p {
+  color: #fff;
+}
+
+.bestTeam .teamGallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  padding: 5vh;
+}
+
+.bestTeam .teamGallery .member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bestTeam .teamGallery .member img {
+  height: 70%;
+  width: 70%;
+}
+
+.bestTeam .teamGallery .member h5 {
+  margin: 2vh auto 1vh auto;
+  color: #e7a220;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.bestTeam .teamGallery .member p {
+  margin-top: 0;
+  color: #999999;
+}
+
+.ourWork {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% auto;
+      grid-template-columns: 30% auto;
+  min-height: 100vh;
+}
+
+.ourWork .ourCreativeWork .btn {
+  height: 5h;
+  width: 30vh;
+  padding: auto auto;
+  font-size: 2.5vh;
+  font-weight: bold;
+  letter-spacing: .2vh;
+  background: #e7a220;
+  color: #fff;
+  border-radius: 3vh;
+}
+
+.ourWork .gallery {
+  position: relative;
+}
+
+.ourWork .gallery .img1 {
+  position: absolute;
+  height: 50%;
+  width: 60%;
+  right: 32.5%;
+  top: 2.5%;
+}
+
+.ourWork .gallery .img2 {
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  right: 0;
+  top: 2.5%;
+}
+
+.ourWork .gallery .img3 {
+  position: absolute;
+  height: 65%;
+  width: 30%;
+  right: 0;
+  bottom: 0;
+}
+
+.ourWork .gallery .img4 {
+  position: absolute;
+  height: 42.5%;
+  width: 50%;
+  right: 32.5%;
+  bottom: 2.5%;
+}
+
+.chooseUs {
+  background: #191919;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  min-height: 90vh;
+}
+
+.chooseUs .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.chooseUs .photo img {
+  height: 90%;
+  width: 100%;
+}
+
+.chooseUs .whyChooseUs {
+  margin: 0 10vh;
+}
+
+.chooseUs .whyChooseUs h1 {
+  color: #fff;
+}
+
+.chooseUs .whyChooseUs .whyChooseUsContent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3vh 0;
+}
+
+.chooseUs .whyChooseUs .whyChooseUsContent .icon {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.ourService {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% auto;
+      grid-template-columns: 40% auto;
+  min-height: 100vh;
+}
+
+.ourService .ourBestService {
+  margin: 0 20vh;
+  text-align: end;
+}
+
+.ourService .ourBestService .line {
+  float: right;
+}
+
+.ourService .ourBestService p {
+  margin: 6.8vh 0;
+}
+
+.ourService .ourServicePhoto {
+  background: url("../images/camera-coffee-composition-1509428.jpg") center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.ourService .ourServicePhoto .ourServiceDesc {
+  height: 80%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  background: #191919;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+
+.ourService .ourServicePhoto .ourServiceDesc .descContent {
+  text-align: center;
+}
+
+.ourService .ourServicePhoto .ourServiceDesc .descContent .icon {
+  color: #fff;
+  margin: 2vh auto;
+}
+
+.ourService .ourServicePhoto .ourServiceDesc .descContent .icon-border {
+  height: 10vh;
+  width: 10vh;
+  border: .5vh solid #fff;
+  border-radius: 50%;
+}
+
+.ourService .ourServicePhoto .ourServiceDesc .descContent .text {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.ourService .ourServicePhoto .ourServiceDesc .descContent h5 {
+  color: #e7a220;
+}
+
+.ourClient {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% auto 35%;
+      grid-template-columns: 35% auto 35%;
+  min-height: 80vh;
+  background: #191919;
+}
+
+.ourClient .ourClientSay {
+  margin: 0 5vh 0 20vh;
+}
+
+.ourClient .ourClientSay h1 {
+  color: #fff;
+}
+
+.ourClient .ourClientSay p {
+  color: #fff;
+}
+
+.ourClient .clientPhoto {
+  background: url("../images/adult-agreement-beard-541522.jpg") center center;
+  background-size: cover;
+}
+
+.ourClient .clientComment {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ourClient .clientComment .container {
+  width: 55%;
+  text-align: center;
+}
+
+.ourClient .clientComment .container i {
+  color: #e7a220;
+}
+
+.ourClient .clientComment .carousel-indicators {
+  top: 100%;
+}
+
+.ourClient .clientComment .carousel-indicators li {
+  background-color: #191919;
+}
+
+.ourClient .clientComment .carousel-indicators .active {
+  background-color: #e7a220;
+}
+
+.getInTouch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 50vh;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(49, 49, 49, 0.8)), to(rgba(48, 48, 48, 0.8))), url("../images/mihail-macri-541060-unsplash.jpg");
+  background-image: linear-gradient(to right top, rgba(49, 49, 49, 0.8), rgba(48, 48, 48, 0.8)), url("../images/mihail-macri-541060-unsplash.jpg");
+  background-size: cover;
+}
+
+.getInTouch .getInTouchIcons {
+  width: 70%;
+  text-align: center;
+}
+
+.getInTouch .getInTouchIcons h1 {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5vh;
+}
+
+.getInTouch .getInTouchIcons .mediaIcons {
+  font-size: 3vh;
+  font-weight: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.getInTouch .getInTouchIcons .mediaIcons i {
+  margin: 5vh auto;
+  color: #fff;
+  height: 8vh;
+  width: 8vh;
+  line-height: 8vh;
+  border: .3vh solid #fff;
+  border-radius: 50%;
+}
+
+.footer {
+  min-height: 60vh;
+  background: #191919;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer .footerContent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  width: 80%;
+  margin: 5vh auto;
+}
+
+.footer .footerContent .f-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3vh 0;
+}
+
+.footer .footerContent .f-content ul li {
+  color: #999999;
+  list-style: none;
+}
+
+.footer .borderBox {
+  position: absolute;
+  height: 40vh;
+  width: 40vh;
+  border: 1vh solid #e7a220;
+  z-index: 1;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transform: translate(-50%, 30%) rotate(-45deg);
+          transform: translate(-50%, 30%) rotate(-45deg);
+}
+
+.footer .borderBox .content {
+  color: #fff;
+  text-align: center;
+  font-size: 2.5vh;
+  -webkit-transform: translate(35%, -100%) rotate(45deg);
+          transform: translate(35%, -100%) rotate(45deg);
+}
+/*# sourceMappingURL=main.css.map */
