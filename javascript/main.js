@@ -11,13 +11,11 @@ $(function () {
     function checkTop() {
         if ($(window).scrollTop() > 200) {
             $(".navbar").addClass("navbar-bg");
-            // $(".navbar-nav a").css("color", "#191919");
             $(".navbar-nav").css("width", "70%");
             $(".navbar-brand").css("display", "block");
             $(".space").css("display", "none");
         } else {
             $(".navbar").removeClass("navbar-bg");
-            // $(".navbar-nav a").css("color", "#999999");
             $(".navbar-nav").css("width", "100%");
             $(".navbar-brand").css("display", "none");
             $(".space").css("display", "block");
