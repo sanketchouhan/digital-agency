@@ -101,6 +101,7 @@ body{
 
             a{
                 text-transform: capitalize;
+                font-size: 1rem;
                 letter-spacing: .15rem;
                 color: rgb(202, 202, 202);
                 transition: all .5s ease;
@@ -111,9 +112,15 @@ body{
                     border-bottom: 2px solid $secondary;
                 }
             }
+
+            .active{
+                color: #fff;
+                border-top: 2px solid $secondary;
+                border-bottom: 2px solid $secondary;
+            }
         }
     }
-
+    
     .navbar-bg{
         background: linear-gradient(to top, #999999ee, #191919ee);
     }
@@ -150,9 +157,11 @@ body{
             letter-spacing: .15rem;
             background: $secondary;
             color: #fff;
-            border-radius: 3vh;
+            padding: .8rem 0;
+            border-radius: 10vh;
 
             &:hover{
+                color: #fff;
                 background: $primary;
             }
         }
@@ -162,6 +171,24 @@ body{
 }
 
 // shared css
+
+.btn{
+    width: 25vh;
+    margin: 2rem auto;
+    // font-size: 1rem;
+    // font-weight: bo;
+    letter-spacing: .1rem;
+    padding: .5rem 0;
+    background: $secondary;
+    color: #fff;
+    border-radius: 10rem;
+
+    // &:hover{
+    //     color: #fff;
+    //     background: $primary;
+    // }
+}
+
 
 .description{
     margin-left:20vh;
@@ -238,6 +265,7 @@ body{
         //     color: $primary;
         //     margin: 3vh 0;
         // }
+        
     }
 
     .creativeTeamGallery{
@@ -321,6 +349,23 @@ body{
             color: #fff;
         //     margin: 3vh 0;
         }
+
+        .btn{
+            // width: 24vh;
+        //     margin: 2rem auto;
+            // font-size: rem;
+        //     font-weight: bold;
+        //     letter-spacing: .15rem;
+        //     background: $secondary;
+        //     color: #fff;
+            // padding: .5rem 0;
+            // border-radius: 2rem;
+            &:hover{
+                color: #fff;
+                background: $lightPrimary;
+            }
+        }
+        
     }
 
     .teamGallery{

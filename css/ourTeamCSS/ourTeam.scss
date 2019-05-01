@@ -1,0 +1,141 @@
+$secondary:rgb(231,162,32);
+$primary:rgb(25, 25, 25);
+$lightPrimary : lighten($primary,50%);
+// $darkPrimary: 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Merriweather', serif;
+    font-size: .9rem;
+}
+
+
+// navbar section
+.navbar{
+    width: 100%;
+    height: 5em;
+    background: linear-gradient(to top, #999999ee, #191919ee);
+
+    .navbar-brand{
+        width: 20%;
+        color: $primary;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+    }
+
+    .navbar-nav{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+
+        a{
+            text-transform: capitalize;
+            letter-spacing: .15rem;
+            font-size: 1rem;
+            color: rgb(202, 202, 202);
+            transition: all .5s ease;
+
+            &:hover{
+                color: #fff;
+                border-top: 2px solid $secondary;
+                border-bottom: 2px solid $secondary;
+            }
+        }
+        .active{
+            color: #fff;
+            border-top: 2px solid $secondary;
+            border-bottom: 2px solid $secondary;
+        }
+    }
+}
+
+
+.container{
+    width: 80%;
+
+    h1{
+        color: $primary;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin: 4rem auto 2rem auto;
+        text-align: center;
+    }
+    
+    .aboutTeam{
+        text-align: justify;
+    }
+    
+    .teamMember{
+        .col-sm-6{
+            text-align: center;
+            margin: 2rem 0;
+
+            img{
+                margin-bottom: 2rem;
+                width: 130px;
+                border-radius: 50%;
+            }
+
+            p{
+                font-size: .8rem;
+                padding: 2rem;
+            }
+        }
+    }
+
+    hr{
+        margin-bottom: 0;
+    }
+    .footer{
+        .col-12{
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .navElements{
+            a{
+                text-decoration: none;
+                color: $primary;
+            }
+
+            a:hover{
+                color: $lightPrimary;
+            }
+        }
+
+        .mediaIcons{
+            justify-content: space-evenly;
+            font-size: 1rem;
+            font-weight: 100;
+
+            i{
+                height: 5vh;
+                width: 5vh;
+                line-height: 5vh;
+                color: #fff;
+                text-align: center;
+                background: $primary;
+                border-radius: 50%;
+            }
+
+            i:hover{
+                background: $lightPrimary;
+                cursor: pointer;
+            }
+        }
+
+        .copyright{
+            font-size: .8rem;
+        }
+    }
+}
