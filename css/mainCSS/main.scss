@@ -23,7 +23,7 @@ body{
 }
 
  //  navbar section
- .navbar-expand-md{
+.navbar-expand-md{
     position: fixed;
     width: 100%;
     min-height: 5em;
@@ -76,6 +76,7 @@ body{
     .navbar-nav{
         width: 100%;
         justify-content: space-evenly;
+
         .space{
             width: 30%;
         }
@@ -122,6 +123,7 @@ body{
         border: .5rem solid $secondary;
         z-index: 1;
         left: 50%;
+        top: -50%;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -152,7 +154,6 @@ body{
                     border-radius: 50%;
                 }
             }
-            
         }
     }
 
@@ -174,10 +175,14 @@ body{
             letter-spacing: .7rem;
             text-transform: uppercase;
             text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
         }
 
         p{
             margin: 2rem auto;
+            opacity: 0;
+            transform: translateY(50px);
         }
 
         .btn{
@@ -190,6 +195,8 @@ body{
             color: #fff;
             padding: .7rem 0;
             border-radius: 5rem;
+            opacity: 0;
+            transform: translateY(50px);
 
             &:hover{
                 color: #fff;
@@ -223,19 +230,26 @@ body{
         font-weight: bold;
         text-transform: uppercase;
         margin-bottom: 1.5rem;
+        opacity: 0;
+        transform: translateY(50px);
     }
 
     .line{
         height: .4rem;
         width: 50%;
         background: $secondary;
+        opacity: 0;
+        transform: translateY(50px);
     }
 
     p{
         color: $primary;
         margin: 1.5rem 0;
+        opacity: 0;
+        transform: translateY(50px);
     }
 }
+
 
 .gridContent{
     .icon{
@@ -261,7 +275,7 @@ body{
 
 .creativeTeam{
     padding: 0;
-    min-height: 80vh;
+    min-height: 90vh;
     overflow: hidden;
 
     .creativeTeamGallery{
@@ -353,7 +367,9 @@ body{
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
-    
+                transform: translateY(100px);
+                opacity: 0;
+
                 img{
                     width: 80%;
                 }
@@ -396,6 +412,8 @@ body{
             width: 60%;
             right: 32.5%;
             top: 2.5%;
+            transform: translateX(200px);
+            opacity: 0;
         }
 
         .img2{
@@ -404,6 +422,8 @@ body{
             width: 30%;
             right: 0;
             top: 2.5%;
+            transform: translateX(200px);
+            opacity: 0;
         }
 
         .img3{
@@ -412,6 +432,8 @@ body{
             width: 30%;
             right: 0;
             bottom: 0;
+            transform: translateX(200px);
+            opacity: 0;
         }
 
         .img4{
@@ -420,6 +442,8 @@ body{
             width: 50%;
             right: 32.5%;
             bottom: 2.5%;
+            transform: translateX(200px);
+            opacity: 0;
         }
     }
 }
@@ -441,6 +465,8 @@ body{
         img{
             height: 90%;
             width: 90%;
+            transform: translateX(-100%);
+            opacity: 0;
         }
     }
     .whyChooseUs{
@@ -458,6 +484,13 @@ body{
 
             .icon{
                 justify-content: start;
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            h5{
+                opacity: 0;
+                transform: translateY(50px);
             }
         }
     }
@@ -498,9 +531,12 @@ body{
             grid-template-columns: 50% 50%;
             background: $primary;
             transform: translateX(-10%);
+            overflow: hidden;
 
             .descContent{
                 text-align: center;
+                transform: translateX(200px);
+                opacity: 0;
 
                 .icon{
                     color: #fff;
@@ -551,12 +587,16 @@ body{
     .clientPhoto{
         background: url("../../images/adult-asian-banking-733856.jpg") center center;
         background-size: cover;
+        transform: translateX(200px);
+        opacity: 0;
     }
 
     .clientComment{
         background: #fff;
         display: flex;
         align-items: center;
+        transform: translateX(200px);
+        opacity: 0;
 
         .container{
             width: 55%;
@@ -601,6 +641,8 @@ body{
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5vh;
+            transform: translateY(50px);
+            opacity: 0;
         }
         .mediaIcons{
             font-size: 3.2vh;
@@ -616,6 +658,8 @@ body{
                 line-height: 4rem;
                 border: .15rem solid #fff;
                 border-radius: 50%;
+                transform: translateY(50px);
+                opacity: 0;
             }
         }
     }
@@ -641,6 +685,15 @@ body{
             display: grid;
             grid-template-columns: 15% 85%;
             justify-content: center;
+
+            .icon{
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            .text{
+                transform: translateY(50px);
+                opacity: 0;
+            }
             ul li{
                 color: $lightPrimary;
                 list-style: none;
@@ -660,6 +713,8 @@ body{
         align-items: center;
         justify-content: space-around;
         transform: translate(-50%,-35%) rotate(-45deg);
+        opacity: 0;
+        bottom: -130%;
 
         .content{
             color: #fff;
