@@ -2,7 +2,6 @@
 $secondary:rgb(231,162,32);
 $primary:rgb(25, 25, 25);
 $lightPrimary : lighten($primary,50%);
-// $darkPrimary: 
 
 *{
     margin: 0;
@@ -10,6 +9,7 @@ $lightPrimary : lighten($primary,50%);
 }
 
 body{
+    width: 100%;
     font-family: 'Merriweather', serif;
     font-size: .9rem;
 }
@@ -17,6 +17,92 @@ body{
 .secondary{
     color: $secondary;
 }
+
+.row{
+    margin: 0;
+}
+
+ //  navbar section
+ .navbar-expand-md{
+    position: fixed;
+    width: 100%;
+    min-height: 5em;
+    z-index: 50;
+    transition: all .2s ease;
+
+    .navbar-brand{
+        width: 20%;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: center;
+        display: none;
+    }
+
+    button:focus{
+        outline: none;
+    }
+
+    .toggler-btn{
+        padding: 5px;
+        transition: all 1s ease;
+    }
+    
+    .bar{
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background: #fff;
+        transition: all 0.5s ease;
+    }
+    
+    .change .bar1{
+        transform: translateY(8px) rotate(135deg);
+    }
+    
+    .change .bar2{
+        opacity: 0;
+    }
+    
+    .change .bar3{
+        transform: translateY(-8px) rotate(45deg);
+    }
+
+    .navbar-collapse{
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .navbar-nav{
+        width: 100%;
+        justify-content: space-evenly;
+        .space{
+            width: 30%;
+        }
+
+        a{
+            padding: 10px 20px;
+            text-transform: capitalize;
+            letter-spacing: .15rem;
+            color: rgb(202, 202, 202);
+            transition: all .5s ease;
+
+            &:hover{
+                padding-top: 8px;
+                padding-bottom: 8px;
+                color: #fff;
+                border-top: 2px solid $secondary;
+                border-bottom: 2px solid $secondary;
+            }
+        }
+    }
+}
+
+.navbar-bg{
+    background-image: radial-gradient(circle, #999999f5, #767676f5, #555555f5, #353535f5, #191919f5);
+}
+
+// end of navbar section
 
 
 // start of header section
@@ -31,9 +117,9 @@ body{
 
     .borderBox{
         position: absolute;
-        height: 40vh;
-        width: 40vh;
-        border: 1vh solid $secondary;
+        height: 17rem;
+        width: 17rem;
+        border: .5rem solid $secondary;
         z-index: 1;
         left: 50%;
         display: flex;
@@ -48,7 +134,7 @@ body{
             transform: translate(-35%,40%) rotate(45deg);
 
             .line{
-                height: .5vh;
+                height: .2rem;
                 width: 60%;
                 margin: .5rem auto .8rem auto;
                 background: #fff;
@@ -59,10 +145,10 @@ body{
                 font-weight: 100;
 
                 i{
-                    height: 5vh;
-                    width: 5vh;
-                    line-height: 5vh;
-                    border: .3vh solid #fff;
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    line-height: 2.5rem;
+                    border: .2rem solid #fff;
                     border-radius: 50%;
                 }
             }
@@ -70,63 +156,7 @@ body{
         }
     }
 
-    //  navbar section
-
-    .navbar{
-        position: fixed;
-        width: 100%;
-        height: 5em;
-        z-index: 50;
-        transition: all .2s ease;
-
-        .navbar-brand{
-            width: 20%;
-            color: #fff;
-            font-size: 2rem;
-            font-weight: 500;
-            text-align: center;
-            display: none;
-        }
-
-        .navbar-nav{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-direction: row;
-
-            .space{
-                width: 20%;
-            }
-
-            a{
-                text-transform: capitalize;
-                font-size: 1rem;
-                letter-spacing: .15rem;
-                color: rgb(202, 202, 202);
-                transition: all .5s ease;
-
-                &:hover{
-                    color: #fff;
-                    border-top: 2px solid $secondary;
-                    border-bottom: 2px solid $secondary;
-                }
-            }
-
-            .active{
-                color: #fff;
-                border-top: 2px solid $secondary;
-                border-bottom: 2px solid $secondary;
-            }
-        }
-    }
-    
-    .navbar-bg{
-        background: linear-gradient(to top, #999999ee, #191919ee);
-    }
-
-    // end of navbar section
-
+   
     // start of heading section
 
     .heading{
@@ -141,24 +171,25 @@ body{
             font-family: 'Russo One', sans-serif;
             font-size: 4rem;
             font-weight: 500;
-            letter-spacing: 1rem;
+            letter-spacing: .7rem;
             text-transform: uppercase;
+            text-align: center;
         }
 
         p{
-            margin: 3rem auto;
+            margin: 2rem auto;
         }
 
         .btn{
-            width: 30vh;
-            margin: 2rem auto;
+            width: 12rem;
+            margin: 1rem auto;
             font-size: 1rem;
             font-weight: bold;
             letter-spacing: .15rem;
             background: $secondary;
             color: #fff;
-            padding: .8rem 0;
-            border-radius: 10vh;
+            padding: .7rem 0;
+            border-radius: 5rem;
 
             &:hover{
                 color: #fff;
@@ -175,41 +206,34 @@ body{
 .btn{
     width: 25vh;
     margin: 2rem auto;
-    // font-size: 1rem;
-    // font-weight: bo;
     letter-spacing: .1rem;
     padding: .5rem 0;
     background: $secondary;
     color: #fff;
     border-radius: 10rem;
-
-    // &:hover{
-    //     color: #fff;
-    //     background: $primary;
-    // }
 }
 
 
 .description{
-    margin-left:20vh;
-    padding-top: 10vh;
+    margin:0;
+    padding: 5% 0 5% 10%;
     
     h1{
         color: $primary;
         font-weight: bold;
         text-transform: uppercase;
-        margin-bottom: 3vh;
+        margin-bottom: 1.5rem;
     }
 
     .line{
-        height: .8vh;
+        height: .4rem;
         width: 50%;
         background: $secondary;
     }
 
     p{
         color: $primary;
-        margin: 3vh 0;
+        margin: 1.5rem 0;
     }
 }
 
@@ -222,7 +246,6 @@ body{
     }
 
     h5{
-        // margin-bottom: 0;
         color: #fff;
         font-size: 1rem;
         text-transform: uppercase;
@@ -234,55 +257,29 @@ body{
         color: $lightPrimary;
     }
 }
-
-
 // start of creative team section
 
 .creativeTeam{
-    display: grid;
-    grid-template-columns: 30% auto;
-    min-height: 90vh;
+    padding: 0;
+    min-height: 80vh;
     overflow: hidden;
-
-    .ourCreativeTeam{
-        // margin-left:20vh;
-        // padding-top: 5vh;
-        
-        // h1{
-        //     color: $primary;
-        //     font-weight: bold;
-        //     text-transform: uppercase;
-        //     margin-bottom: 3vh;
-        // }
-
-        // .line{
-        //     height: .8vh;
-        //     width: 50%;
-        //     background: $secondary;
-        // }
-
-        // p{
-        //     color: $primary;
-        //     margin: 3vh 0;
-        // }
-        
-    }
 
     .creativeTeamGallery{
         position: relative;
+        height: 100%;
         transform:translate(10%,-5%) rotate(-45deg);
        
 
         .image, .borderBox{
             position: absolute;
-            height: 47vh;
-            width: 47vh;
+            height: 17rem;
+            width: 17rem;
             top: 50%;
             left: 50%;
         }
 
         .image{
-            border: .5vh solid $secondary;
+            border: .3rem solid $secondary;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -291,11 +288,12 @@ body{
 
         .borderBox{
             transform: translate(-10%,-160%);
-            border: 2vh solid lighten($secondary, 20%);
+            border: 1rem solid lighten($secondary, 20%);
+            filter: blur(1px);
         }
 
         img{
-            height: 130%;
+            height: 150%;
             width: 150%;
             transform: rotate(45deg);
         }
@@ -324,79 +322,56 @@ body{
 
 .bestTeam{
     background: $primary;
-    display: grid;
-    grid-template-columns: 30% auto;
-    min-height: 100vh;
-
+    padding: 0;
+    min-height: 80vh;
+    overflow: hidden;
     .ourBestTeam{
-        // margin-left:20vh;
-        // padding-top: 5vh;
         
         h1{
             color: #fff;
-        //     font-weight: bold;
-        //     text-transform: uppercase;
-        //     margin-bottom: 3vh;
         }
-
-        // .line{
-        //     height: .8vh;
-        //     width: 50%;
-        //     background: $secondary;
-        // }
 
         p{
             color: #fff;
-        //     margin: 3vh 0;
         }
 
         .btn{
-            // width: 24vh;
-        //     margin: 2rem auto;
-            // font-size: rem;
-        //     font-weight: bold;
-        //     letter-spacing: .15rem;
-        //     background: $secondary;
-        //     color: #fff;
-            // padding: .5rem 0;
-            // border-radius: 2rem;
             &:hover{
                 color: #fff;
                 background: $lightPrimary;
             }
         }
-        
     }
 
     .teamGallery{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        padding: 5vh;
-
-        .member{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-
-            img{
-                height: 70%;
-                width: 70%
-            }
-            h5{
-                margin: 2vh auto 1vh auto;
-                color: $secondary;
-                font-size: 1.2rem;
-                text-transform: uppercase;
-                font-weight: bold;
-            }
-
-            p{
-                margin-top: 0;
-                color: $lightPrimary;
-                // transform: translateY(-5%);
+        padding: 0;
+        .row{
+            height: 100%;
+            .member{
+                padding: 1rem 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+    
+                img{
+                    width: 80%;
+                }
+                h5{
+                    margin: 1.5rem auto 1rem auto;
+                    color: $secondary;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+    
+                p{
+                    margin: 0;
+                    color: $lightPrimary;
+                }
             }
         }
+        
     }
 }
 
@@ -406,47 +381,14 @@ body{
 // start of our best work section
 
 .ourWork{
-    display: grid;
-    grid-template-columns: 30% auto;
-    min-height: 100vh;
-
-    .ourCreativeWork{
-        // margin-left:20vh;
-        // padding-top: 5vh;
-        
-        // h1{
-        //     color: $primary;
-        //     font-weight: bold;
-        //     text-transform: uppercase;
-        //     margin-bottom: 3vh;
-        // }
-
-        // .line{
-        //     height: .8vh;
-        //     width: 50%;
-        //     background: $secondary;
-        // }
-
-        // p{
-        //     color: $primary;
-        //     margin: 3vh 0;
-        // }
-
-        .btn{
-            height: 5h;
-            width: 30vh;
-            padding: auto auto;
-            font-size: 2.5vh;
-            font-weight: bold;
-            letter-spacing: .2vh;
-            background: $secondary;
-            color: #fff;
-            border-radius: 3vh;
-        }
-    }
-
+    padding: 0;
+    min-height: 80vh;
+    overflow: hidden;
+   
     .gallery{
         position: relative;
+        padding: 0;
+        height: 100%;
 
         .img1{
             position: absolute;
@@ -488,60 +430,35 @@ body{
 
 .chooseUs{
     background: $primary;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    min-height: 90vh;
+    padding: 0;
+    min-height: 80vh;
+    overflow: hidden;
     .photo{
+        padding: 0;
         display: flex;
         align-items: center;
         justify-content: start;
         img{
             height: 90%;
-            width: 100%;
+            width: 90%;
         }
     }
     .whyChooseUs{
-        margin: 0 10vh;
-        // padding-top: 5vh;
+        padding: 5% 10% 5% 0%;
         
         h1{
             color: #fff;
-        //     font-weight: bold;
-        //     text-transform: uppercase;
-        //     margin-bottom: 3vh;
         }
-
-        // .line{
-        //     height: .8vh;
-        //     width: 50%;
-        //     background: $secondary;
-        // }
 
         .whyChooseUsContent{
             display: grid;
             grid-template-columns: 20% 80%;
             justify-content: center;
-            margin: 3vh 0;
+            margin: 1.5rem 0 0 0;
 
             .icon{
                 justify-content: start;
-            //     color: $secondary;
-            //     display: flex;
-            //     align-items: center;
             }
-
-            // h5{
-            //     margin-bottom: 0;
-            //     color: #fff;
-            //     font-size: 1.2rem;
-            //     text-transform: uppercase;
-            //     font-weight: bold;
-            // }
-
-            // p{
-            //     margin-top: 0;
-            //     color: $lightPrimary;
-            // }
         }
     }
 }
@@ -551,42 +468,31 @@ body{
 // start of our best service section
 
 .ourService{
-    display: grid;
-    grid-template-columns: 40% auto;
-    min-height: 100vh;
+    padding: 0;
+    min-height: 80vh;
+    overflow: hidden;
     .ourBestService{
-        margin:0 20vh;
-        // padding-top: 5vh;
+        padding: 5% 8% 5% 10%;
         text-align: end;
-        
-        // h1{
-        //     color: $primary;
-        //     font-weight: bold;
-        //     text-transform: uppercase;
-        //     margin-bottom: 3vh;
-        // }
 
         .line{
             float: right;
-        //     height: .8vh;
-        //     width: 50%;
-        //     background: $secondary;
         }
 
         p{
-        //     color: $primary;
-            margin: 6.8vh 0;
+            margin: 3.4rem 0;
         }
     }
 
     .ourServicePhoto{
+        padding: 0;
         background: url("../../images/camera-coffee-composition-1509428.jpg") center center ;
         background-size: cover;
         display: flex;
         align-items: center;
         justify-content: start;
         .ourServiceDesc{
-            height: 80%;
+            height: 85%;
             width: 100%;
             display: grid;
             grid-template-columns: 50% 50%;
@@ -598,15 +504,12 @@ body{
 
                 .icon{
                     color: #fff;
-                    margin: 2vh auto; 
+                    margin: 1rem auto; 
                 }
 
                 .icon-border{
                     height: 10vh;
                     width: 10vh;
-                    // display: flex;
-                    // align-items: center;
-                    // justify-content: center;
                     border: .5vh solid #fff;
                     border-radius: 50%;
                 }
@@ -617,17 +520,8 @@ body{
                 }
     
                 h5{
-                //     margin-bottom: 0;
                     color: $secondary;
-                //     font-size: 1.1rem;
-                //     text-transform: uppercase;
-                //     font-weight: bold;
                 }
-    
-                // p{
-                //     margin-top: 0;
-                //     color: $lightPrimary;
-                // }
             }
         }
     }
@@ -638,31 +532,19 @@ body{
 // start of our client say section
 
 .ourClient{
-    display: grid;
-    grid-template-columns: 35% auto 35%;
-    min-height: 80vh;
     background: $primary;
+    padding: 0;
+    min-height: 50vh;
+    overflow: hidden;
 
     .ourClientSay{
-        margin:0 5vh 0 20vh;
-        // padding-top: 5vh;
+        padding: 5% 2% 5% 10%;
         
         h1{
             color: #fff;
-        //     font-weight: bold;
-        //     text-transform: uppercase;
-        //     margin-bottom: 3vh;
         }
-
-        // .line{
-        //     height: .8vh;
-        //     width: 50%;
-        //     background: $secondary;
-        // }
-
         p{
             color: #fff;
-        //     margin: 3vh 0;
         }
     }
 
@@ -702,10 +584,11 @@ body{
 // start of get in touch section
 
 .getInTouch{
+    padding: 10% 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 50vh;
+    min-height: 30vh;
     background-image: linear-gradient(to right top, rgba(49, 49, 49, 0.8), rgba(48, 48, 48, 0.8)), url("../../images/mihail-macri-541060-unsplash.jpg");
     background-size: cover;
 
@@ -720,18 +603,18 @@ body{
             letter-spacing: 1.5vh;
         }
         .mediaIcons{
-            font-size: 3vh;
+            font-size: 3.2vh;
             font-weight: 100;
             display: flex;
             justify-content: space-around;
 
             i{
-                margin: 5vh auto;
+                margin: 2rem auto 0 auto;
                 color: #fff;
-                height: 8vh;
-                width: 8vh;
-                line-height: 8vh;
-                border: .3vh solid #fff;
+                height: 4rem;
+                width: 4rem;
+                line-height: 4rem;
+                border: .15rem solid #fff;
                 border-radius: 50%;
             }
         }
@@ -743,41 +626,21 @@ body{
 // start of footer section
 
 .footer{
-    min-height: 60vh;
+    padding: 0;
+    min-height: 50vh;
     background: $primary;
     position: relative;
     overflow: hidden;
 
     .footerContent{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        width: 80%;
-        margin: 5vh auto;
+        width: 90%;
+        margin: 4rem auto 10rem auto;
 
         .f-content{
+            padding: 0;
             display: grid;
-            grid-template-columns: 20% 80%;
+            grid-template-columns: 15% 85%;
             justify-content: center;
-            margin: 3vh 0;
-
-            // .icon{
-            //     color: $secondary;
-            //     display: flex;
-            //     align-items: center;
-            // }
-
-            // h5{
-            //     margin-bottom: 0;
-            //     font-size: 1.2rem;
-            //     color: #fff;
-            //     text-transform: uppercase;
-            //     font-weight: bold;
-            // }
-
-            // p{
-            //     margin-top: 0;
-            // }
-
             ul li{
                 color: $lightPrimary;
                 list-style: none;
@@ -788,21 +651,21 @@ body{
 
     .borderBox{
         position: absolute;
-        height: 40vh;
-        width: 40vh;
-        border: 1vh solid $secondary;
+        height: 15rem;
+        width: 15rem;
+        border: .5rem solid $secondary;
         z-index: 1;
         left: 50%;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        transform: translate(-50%,30%) rotate(-45deg);
+        transform: translate(-50%,-35%) rotate(-45deg);
 
         .content{
             color: #fff;
             text-align: center;
-            font-size: 2.5vh;
-            transform: translate(35%,-100%) rotate(45deg);
+            font-size: .8rem;
+            transform: translate(35%,-120%) rotate(45deg);
         }
     }
 }

@@ -15,51 +15,87 @@ body{
 
 
 // navbar section
-.navbar{
+
+.navbar-expand-md{
+    position: fixed;
     width: 100%;
-    height: 5em;
-    background: linear-gradient(to top, #999999ee, #191919ee);
+    min-height: 5em;
+    z-index: 50;
+    background-image: radial-gradient(circle, #999999f5, #767676f5, #555555f5, #353535f5, #191919f5);
+    transition: all .2s ease;
 
     .navbar-brand{
         width: 20%;
-        color: $primary;
+        color: #fff;
         font-size: 2rem;
         font-weight: 500;
-        color: #fff;
         text-align: center;
     }
 
+    button:focus{
+        outline: none;
+    }
+
+    .toggler-btn{
+        padding: 5px;
+        transition: all 1s ease;
+    }
+    
+    .bar{
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background: #fff;
+        transition: all 0.5s ease;
+    }
+    
+    .change .bar1{
+        transform: translateY(8px) rotate(135deg);
+    }
+    
+    .change .bar2{
+        opacity: 0;
+    }
+    
+    .change .bar3{
+        transform: translateY(-8px) rotate(45deg);
+    }
+
+    .navbar-collapse{
+        width: 100%;
+        justify-content: flex-end;
+    }
+
     .navbar-nav{
-        width: 60%;
-        display: flex;
-        align-items: center;
+        width: 100%;
         justify-content: space-evenly;
-        flex-direction: row;
+        .space{
+            width: 30%;
+        }
 
         a{
+            padding: 10px 20px;
             text-transform: capitalize;
             letter-spacing: .15rem;
-            font-size: 1rem;
             color: rgb(202, 202, 202);
             transition: all .5s ease;
 
             &:hover{
+                padding-top: 8px;
+                padding-bottom: 8px;
                 color: #fff;
                 border-top: 2px solid $secondary;
                 border-bottom: 2px solid $secondary;
             }
         }
-        .active{
-            color: #fff;
-            border-top: 2px solid $secondary;
-            border-bottom: 2px solid $secondary;
-        }
     }
 }
 
 
+
 .container{
     width: 80%;
+    padding-top: 5rem;
 
     h1{
         color: $primary;
@@ -133,7 +169,7 @@ body{
                 cursor: pointer;
             }
         }
-
+        
         .copyright{
             font-size: .8rem;
         }
