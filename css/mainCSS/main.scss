@@ -712,9 +712,8 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-around;
-        transform: translate(-50%,-35%) rotate(-45deg);
+        transform: translate(-50%,25%) rotate(-45deg);
         opacity: 0;
-        bottom: -130%;
 
         .content{
             color: #fff;

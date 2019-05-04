@@ -781,10 +781,9 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-transform: translate(-50%, -35%) rotate(-45deg);
-          transform: translate(-50%, -35%) rotate(-45deg);
+  -webkit-transform: translate(-50%, 25%) rotate(-45deg);
+          transform: translate(-50%, 25%) rotate(-45deg);
   opacity: 0;
-  bottom: -130%;
 }
 
 .footer .borderBox .content {

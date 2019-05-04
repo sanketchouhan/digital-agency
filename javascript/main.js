@@ -67,16 +67,6 @@ $(function () {
     });
 
 
-    // animations
-    // function inViewport(element) {
-    //     var windowHeight = $(window).height();
-    //     var elementTop = $(element).offset().top;
-    //     if (elementTop < $(window).scrollTop() + (windowHeight / 2)) {
-    //         // console.log($(element) + " + " + elementTop);
-    //         return true;
-    //     }
-    // }
-
     TweenMax.to(".header .borderBox", .5, { top: "0%" });
 
     var navbarFlag = false;
@@ -103,7 +93,7 @@ $(function () {
         offset: '60%'
     })
 
-    var team = new Waypoint({
+    var bestTeam = new Waypoint({
         element: document.getElementById('bestTeam'),
         handler: function (down) {
             TweenMax.to(".bestTeam .description h1", .5, { transform: "translateY(0)", opacity: 1 });
@@ -115,7 +105,7 @@ $(function () {
         offset: '60%'
     })
 
-    var team = new Waypoint({
+    var work = new Waypoint({
         element: document.getElementById('work'),
         handler: function (down) {
             TweenMax.to(".ourWork .description h1", .5, { transform: "translateY(0)", opacity: 1 });
@@ -130,7 +120,7 @@ $(function () {
         offset: '60%'
     })
 
-    var team = new Waypoint({
+    var chooseUs = new Waypoint({
         element: document.getElementById('chooseUs'),
         handler: function (down) {
             TweenMax.to(".chooseUs img", 1, { transform: "translateX(0)", opacity: 1 });
@@ -143,7 +133,7 @@ $(function () {
         offset: '60%'
     })
 
-    var team = new Waypoint({
+    var service = new Waypoint({
         element: document.getElementById('service'),
         handler: function (down) {
             TweenMax.to(".ourService .description h1", .5, { transform: "translateY(0)", opacity: 1 });
@@ -155,7 +145,7 @@ $(function () {
         offset: '60%'
     })
 
-    var team = new Waypoint({
+    var client = new Waypoint({
         element: document.getElementById('client'),
         handler: function (down) {
             TweenMax.to(".ourClient .description h1", .5, { transform: "translateY(0)", opacity: 1 });
@@ -168,7 +158,7 @@ $(function () {
         offset: '60%'
     })
 
-    var team = new Waypoint({
+    var contact = new Waypoint({
         element: document.getElementById('contact'),
         handler: function (down) {
             TweenMax.to(".getInTouch h1", .5, { transform: "translateY(0)", opacity: 1 });
@@ -177,48 +167,15 @@ $(function () {
         offset: '60%'
     })
 
-    var team = new Waypoint({
+    var footer = new Waypoint({
         element: document.getElementById('footer'),
         handler: function (down) {
-            // TweenMax.to(".footer h1", .5, { transform: "translateY(0)", opacity: 1 });
             TweenMax.staggerTo(".footer .f-content .text", 1.5, {  transform: "translateY(0)", opacity: 1 }, .5);
             TweenMax.staggerTo(".footer .f-content .icon", 1.5, { transform: "translateX(0)", opacity: 1 }, .5);
-            TweenMax.to(".footer .borderBox", 1, {delay: 1.5, bottom: "-70%" , opacity: 1});
+            TweenMax.to(".footer .borderBox", 1, {delay: 1.5,  transform: "translate(-50%,-35%) rotate(-45deg)", opacity: 1});
         },
         offset: '70%'
     })
-
-    // $(window).on("scroll", function () {
-    //     if(inViewport($(".creativeTeam"))){
-
-    //     }
-    //     else if(inViewport($(".bestTeam"))){
-
-    //     }
-    //     else if(inViewport($(".ourWork"))){
-
-    //     }
-
-    //     else if(inViewport($(".chooseUs"))){
-
-    //     }
-    //     else if(inViewport($(".ourService"))){
-
-    //     }
-    //     else if(inViewport($(".ourClient"))){
-
-    //     }
-
-    //     else if(inViewport($(".getInTouch"))){
-
-    //     }
-    //     else if(inViewport($(".footer"))){
-
-    //     }
-
-    // });
-
-
 
 
 
