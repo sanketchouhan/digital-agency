@@ -1,0 +1,314 @@
+$secondary:rgb(231,162,32);
+$primary:rgb(25, 25, 25);
+$lightPrimary : lighten($primary,50%);
+// $darkPrimary: 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Merriweather', serif;
+    font-size: .9rem;
+}
+
+
+// navbar section
+
+.navbar-expand-md{
+    position: fixed;
+    width: 100%;
+    min-height: 5em;
+    z-index: 50;
+    background-image: radial-gradient(circle, #999999f5, #767676f5, #555555f5, #353535f5, #191919f5);
+    transition: all .2s ease;
+
+    .navbar-brand{
+        width: 20%;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    button:focus{
+        outline: none;
+    }
+
+    .toggler-btn{
+        padding: 5px;
+        transition: all 1s ease;
+    }
+    
+    .bar{
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background: #fff;
+        transition: all 0.5s ease;
+    }
+    
+    .change .bar1{
+        transform: translateY(8px) rotate(135deg);
+    }
+    
+    .change .bar2{
+        opacity: 0;
+    }
+    
+    .change .bar3{
+        transform: translateY(-8px) rotate(45deg);
+    }
+
+    .navbar-collapse{
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .navbar-nav{
+        width: 70%;
+        justify-content: space-evenly;
+
+        a{
+            padding: 10px 20px;
+            text-transform: capitalize;
+            letter-spacing: .15rem;
+            color: rgb(202, 202, 202);
+            transition: all .5s ease;
+
+            &:hover{
+                padding-top: 8px;
+                padding-bottom: 8px;
+                color: #fff;
+                border-top: 2px solid $secondary;
+                border-bottom: 2px solid $secondary;
+            }
+        }
+    }
+}
+
+.header{
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(to right top, rgba(40, 40, 40, 0.8), rgba(40, 40, 40, 0.8)), url("../../images/architecture-boy-buildings-307847.jpg");
+    background-size: cover;
+    color: #fff;
+    letter-spacing: .1rem;
+
+    .content1{
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        text-transform: uppercase;
+
+        h5{
+            margin: 0;
+        }
+        
+        .line{
+            height: .1rem;
+            background: #fff;
+            width: 75%;
+            margin: .5rem 0 1rem 0;
+        }
+    }
+
+
+    .content2{
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+        text-align: right;
+        h1{
+            font-weight: 900;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.description{
+    width: 80%;
+    margin: 5rem auto;
+    padding: 0;
+    text-align: center;
+
+    .head{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .row{
+        h5{
+            margin: 0;
+            font-weight: 600;
+        }
+
+        i{
+            color: $lightPrimary;
+        }
+    }
+}
+
+.bestWork{
+    margin: 0;
+    padding: 5rem 0;
+    width: 100%;
+    text-align: center;
+    background: #cccccc;
+
+
+    h5 ,p{
+        font-weight: 600;
+    }
+    p{
+        margin-bottom: 3rem;
+    }
+
+    .row{
+        margin: 0;
+        padding: 0;
+    }
+    .col-12{
+        margin: 0;
+        padding: 0;
+        // height: 25vw;
+        // position: relative;
+
+        .workContent{
+            // position: absolute;
+            // width: 80%;
+            // margin: 0 auto;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%,-50%);
+            // text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10%;
+
+            h4,h6{
+                font-weight: 600;
+            }
+
+            p{
+                margin: 0;
+                font-size: .8rem;
+            }
+        }
+    }
+    .row1 .col-6:nth-child(2), .row1 .col-6:nth-child(3),.row2 .col-6:nth-child(2), .row2 .col-6:nth-child(3){
+        background: $secondary;
+    }
+}
+
+.quote{
+    width: 100%;
+    color: #fff;
+    padding: 5%;
+    background-image: linear-gradient(to right top, rgba(40, 40, 40, 0.8), rgba(40, 40, 40, 0.8)), url("../../images/architecture-boy-buildings-307847.jpg");
+    background-size: cover;
+
+    .quoteContent{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+
+        p{
+            margin: 1rem auto;
+        }
+
+        .line{
+            height: .2rem;
+            background: #fff;;
+            width: 50%;
+            margin: 1rem auto;
+        }
+    }
+
+
+}
+
+hr{
+    margin-bottom: 0;
+}
+.footer{
+    .col-12{
+        margin: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .navElements{
+        a{
+            text-decoration: none;
+            color: $primary;
+        }
+
+        a:hover{
+            color: $lightPrimary;
+        }
+    }
+
+    .mediaIcons{
+        justify-content: space-evenly;
+        font-size: 1rem;
+        font-weight: 100;
+
+        i{
+            height: 2rem;
+            width: 2rem;
+            line-height: 2rem;
+            color: #fff;
+            text-align: center;
+            background: $primary;
+            border-radius: 50%;
+        }
+
+        i:hover{
+            background: $lightPrimary;
+            cursor: pointer;
+        }
+    }
+    
+    .copyright{
+        font-size: .8rem;
+    }
+}
+
+
+
+// media css 
+
+@media only screen and (max-width: 575px) {
+    .header{
+        h5{
+            font-size: .9rem;
+        }
+        h1{
+            font-size: 1.7rem;
+        }
+        p{
+            font-size: .7rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .header{
+        h5{
+            font-size: 1rem;
+        }
+        h1{
+            font-size: 2.1rem;
+        }
+        p{
+            font-size: .8rem;
+        }
+    }
+}
+

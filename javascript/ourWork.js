@@ -1,6 +1,7 @@
 $(function () {
 
     checkTop();
+    ourWorkDivHeight();
 
     $(".navbar-toggler").click(function () {
         $(".navbar-toggler").toggleClass('change');
@@ -9,6 +10,7 @@ $(function () {
 
     $(window).resize(function () {
         checkTop();
+        ourWorkDivHeight();
     });
 
     function checkTop() {
@@ -19,5 +21,12 @@ $(function () {
         }
     }
 
+    function ourWorkDivHeight() {
+        if ($(window).outerWidth() < 768) {
+            $(".bestWork .workContent").css("min-height", $(window).outerWidth() / 2);
+        }else{
+            $(".bestWork .workContent").css("min-height", $(window).outerWidth() / 4);
+        }
+    }
 
 });

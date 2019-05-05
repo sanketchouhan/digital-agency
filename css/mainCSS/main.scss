@@ -587,16 +587,16 @@ body{
     .clientPhoto{
         background: url("../../images/adult-asian-banking-733856.jpg") center center;
         background-size: cover;
-        transform: translateX(200px);
-        opacity: 0;
+        // transform: translateX(200px);
+        // opacity: 0;
     }
 
     .clientComment{
         background: #fff;
         display: flex;
         align-items: center;
-        transform: translateX(200px);
-        opacity: 0;
+        // transform: translateX(200px);
+        // opacity: 0;
 
         .container{
             width: 55%;
