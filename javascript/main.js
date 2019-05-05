@@ -150,10 +150,7 @@ $(function () {
         handler: function (down) {
             TweenMax.to(".ourClient .description h1", .5, { transform: "translateY(0)", opacity: 1 });
             TweenMax.to(".ourClient .description .line", .5, { delay: .5, transform: "translateY(0)", opacity: 1 });
-            TweenMax.staggerTo(".ourClient .description p", 1, { delay: 1, transform: "translateY(0)", opacity: 1 },.5);
-
-            // TweenMax.to(".ourClient .clientPhoto", .5, { delay: 1.5, transform: "translateX(0)", opacity: 1 });
-            // TweenMax.to(".ourClient .clientComment", .5, { delay: 2, transform: "translateX(0)", opacity: 1 });
+            TweenMax.staggerTo(".ourClient .description p", .6, { delay: 1, transform: "translateY(0)", opacity: 1 },.3);
         },
         offset: '60%'
     })
