@@ -69,7 +69,7 @@ $(function () {
 
     // window.onload(function () {
 
-        TweenMax.to(".overlay", .5, { top: "-100%" });
+        TweenMax.to(".overlay", .5, { transform: "translateY(-100%)" });
 
 
         TweenMax.to(".header .borderBox", .5, {delay: .5, top: "0%" });
