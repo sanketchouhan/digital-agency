@@ -113,6 +113,7 @@ body {
   background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(40, 40, 40, 0.8)), to(rgba(40, 40, 40, 0.8))), url("../../images/architecture-boy-buildings-307847.jpg");
   background-image: linear-gradient(to right top, rgba(40, 40, 40, 0.8), rgba(40, 40, 40, 0.8)), url("../../images/architecture-boy-buildings-307847.jpg");
   background-size: cover;
+  background-position: center center;
   position: relative;
   color: #fff;
 }
@@ -364,6 +365,12 @@ body {
 
 .bestTeam .ourBestTeam p {
   color: #fff;
+}
+
+.bestTeam .ourBestTeam .btn {
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
 }
 
 .bestTeam .ourBestTeam .btn:hover {
@@ -665,7 +672,7 @@ body {
 }
 
 .getInTouch {
-  padding: 10% 0;
+  padding: 5% 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -675,10 +682,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 30vh;
+  min-height: 20vh;
   background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(49, 49, 49, 0.8)), to(rgba(48, 48, 48, 0.8))), url("../../images/mihail-macri-541060-unsplash.jpg");
   background-image: linear-gradient(to right top, rgba(49, 49, 49, 0.8), rgba(48, 48, 48, 0.8)), url("../../images/mihail-macri-541060-unsplash.jpg");
   background-size: cover;
+  background-position: center center;
 }
 
 .getInTouch .getInTouchIcons {
@@ -721,7 +729,7 @@ body {
 
 .footer {
   padding: 0;
-  min-height: 50vh;
+  min-height: 30vh;
   background: #191919;
   position: relative;
   overflow: hidden;

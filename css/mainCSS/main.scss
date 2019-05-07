@@ -113,6 +113,7 @@ body{
     width: 100%;
     background-image: linear-gradient(to right top, rgba(40, 40, 40, 0.8), rgba(40, 40, 40, 0.8)), url("../../images/architecture-boy-buildings-307847.jpg");
     background-size: cover;
+    background-position: center center;
     position: relative;
     color: #fff;
 
@@ -350,6 +351,8 @@ body{
         }
 
         .btn{
+            opacity: 0;
+            transform: translateY(50px);
             &:hover{
                 color: #fff;
                 background: $lightPrimary;
@@ -624,13 +627,14 @@ body{
 // start of get in touch section
 
 .getInTouch{
-    padding: 10% 0;
+    padding: 5% 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 30vh;
+    min-height: 20vh;
     background-image: linear-gradient(to right top, rgba(49, 49, 49, 0.8), rgba(48, 48, 48, 0.8)), url("../../images/mihail-macri-541060-unsplash.jpg");
     background-size: cover;
+    background-position: center center;
 
     .getInTouchIcons{
         width: 70%;
@@ -671,7 +675,7 @@ body{
 
 .footer{
     padding: 0;
-    min-height: 50vh;
+    min-height: 30vh;
     background: $primary;
     position: relative;
     overflow: hidden;

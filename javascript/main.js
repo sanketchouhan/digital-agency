@@ -99,6 +99,7 @@ $(function () {
             TweenMax.to(".bestTeam .description h1", .5, { transform: "translateY(0)", opacity: 1 });
             TweenMax.to(".bestTeam .description .line", .5, { delay: .5, transform: "translateY(0)", opacity: 1 });
             TweenMax.to(".bestTeam .description p", .5, { delay: 1, transform: "translateY(0)", opacity: 1 });
+            TweenMax.to(".bestTeam .description .teamBtn", .5, { delay: 1.5, transform: "translateY(0)", opacity: 1 });
 
             TweenMax.staggerTo(".teamGallery .member", .6, { delay: 1.5, transform: "translateY(0)", opacity: 1 }, .1);
         },

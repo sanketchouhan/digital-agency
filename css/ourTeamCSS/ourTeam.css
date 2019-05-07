@@ -118,13 +118,14 @@ body {
 
 .container .teamMember .col-sm-6 img {
   margin-bottom: 2rem;
-  width: 130px;
+  width: 150px;
   border-radius: 50%;
 }
 
 .container .teamMember .col-sm-6 p {
+  text-align: justify;
   font-size: .8rem;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .container hr {
