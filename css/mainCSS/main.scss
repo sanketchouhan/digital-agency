@@ -22,6 +22,35 @@ body{
     margin: 0;
 }
 
+.overlay{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // transform: translateY(-50%);
+    z-index: 9999;
+
+    .overlayLogo{
+        width: 10%;
+        animation: animateLogo 1s infinite;
+    }
+}
+
+@keyframes animateLogo{
+    0%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
  //  navbar section
 .navbar-expand-md{
     position: fixed;

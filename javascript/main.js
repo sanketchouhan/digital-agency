@@ -67,7 +67,28 @@ $(function () {
     });
 
 
-    TweenMax.to(".header .borderBox", .5, { top: "0%" });
+    // window.onload(function () {
+
+        TweenMax.to(".overlay", .5, { top: "-100%" });
+
+
+        TweenMax.to(".header .borderBox", .5, {delay: .5, top: "0%" });
+
+        // var navbarFlag = false;
+        // function animateNavbar() {
+        //     if ($(window).outerWidth() >= 768 && !navbarFlag) {
+        //         TweenMax.staggerTo(".navbar-nav .nav-item", .6, { delay: .5, transform: "translateY(0)", opacity: 1 }, .1);
+        //         navbarFlag = true;
+        //     }
+        // }
+
+        TweenMax.to(".header h1", .5, { delay: 2, transform: "translateY(0)", opacity: 1 });
+        TweenMax.to(".header p", .5, { delay: 2.5, transform: "translateY(0)", opacity: 1 });
+        TweenMax.to(".header .btn", .5, { delay: 3, transform: "translateY(0)", opacity: 1 });
+
+    // });
+
+    // TweenMax.to(".header .borderBox", .5, { top: "0%" });
 
     var navbarFlag = false;
     function animateNavbar() {
@@ -77,9 +98,9 @@ $(function () {
         }
     }
 
-    TweenMax.to(".header h1", .5, { delay: 1.5, transform: "translateY(0)", opacity: 1 });
-    TweenMax.to(".header p", .5, { delay: 2, transform: "translateY(0)", opacity: 1 });
-    TweenMax.to(".header .btn", .5, { delay: 2.5, transform: "translateY(0)", opacity: 1 });
+    // TweenMax.to(".header h1", .5, { delay: 1.5, transform: "translateY(0)", opacity: 1 });
+    // TweenMax.to(".header p", .5, { delay: 2, transform: "translateY(0)", opacity: 1 });
+    // TweenMax.to(".header .btn", .5, { delay: 2.5, transform: "translateY(0)", opacity: 1 });
 
 
 
@@ -101,7 +122,7 @@ $(function () {
             TweenMax.to(".bestTeam .description p", .5, { delay: 1, transform: "translateY(0)", opacity: 1 });
             TweenMax.to(".bestTeam .description .teamBtn", .5, { delay: 1.5, transform: "translateY(0)", opacity: 1 });
 
-            TweenMax.staggerTo(".teamGallery .member", .6, { delay: 1.5, transform: "translateY(0)", opacity: 1 }, .1);
+            TweenMax.staggerTo(".teamGallery .member", 1.2, { delay: 1.5, transform: "translateY(0)", opacity: 1 }, .2);
         },
         offset: '60%'
     })
@@ -151,7 +172,7 @@ $(function () {
         handler: function (down) {
             TweenMax.to(".ourClient .description h1", .5, { transform: "translateY(0)", opacity: 1 });
             TweenMax.to(".ourClient .description .line", .5, { delay: .5, transform: "translateY(0)", opacity: 1 });
-            TweenMax.staggerTo(".ourClient .description p", .6, { delay: 1, transform: "translateY(0)", opacity: 1 },.3);
+            TweenMax.staggerTo(".ourClient .description p", .6, { delay: 1, transform: "translateY(0)", opacity: 1 }, .3);
         },
         offset: '60%'
     })
@@ -168,9 +189,9 @@ $(function () {
     var footer = new Waypoint({
         element: document.getElementById('footer'),
         handler: function (down) {
-            TweenMax.staggerTo(".footer .f-content .text", 1.5, {  transform: "translateY(0)", opacity: 1 }, .5);
+            TweenMax.staggerTo(".footer .f-content .text", 1.5, { transform: "translateY(0)", opacity: 1 }, .5);
             TweenMax.staggerTo(".footer .f-content .icon", 1.5, { transform: "translateX(0)", opacity: 1 }, .5);
-            TweenMax.to(".footer .borderBox", 1, {delay: 1.5,  transform: "translate(-50%,-35%) rotate(-45deg)", opacity: 1});
+            TweenMax.to(".footer .borderBox", 1, { delay: 1.5, transform: "translate(-50%,-35%) rotate(-45deg)", opacity: 1 });
         },
         offset: '70%'
     })
