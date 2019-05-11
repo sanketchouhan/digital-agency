@@ -116,10 +116,57 @@ body {
   margin: 2rem 0;
 }
 
-.container .teamMember .col-sm-6 img {
-  margin-bottom: 2rem;
+.container .teamMember .col-sm-6 .img {
+  margin: 0 auto 2rem auto;
   width: 150px;
   border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .teamMember .col-sm-6 .img .after {
+  position: absolute;
+  padding-bottom: 1.5rem;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#00000000));
+  background-image: linear-gradient(to top, #000000, #00000000);
+  z-index: 999;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.container .teamMember .col-sm-6 .img .after i:hover {
+  color: #999999;
+}
+
+.container .teamMember .col-sm-6 .img img {
+  width: 100%;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.container .teamMember .col-sm-6 .img:hover .after {
+  top: 0;
+}
+
+.container .teamMember .col-sm-6 .img:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .container .teamMember .col-sm-6 p {

@@ -114,10 +114,50 @@ body{
             text-align: center;
             margin: 2rem 0;
 
-            img{
-                margin-bottom: 2rem;
+            .img{
+                margin: 0 auto 2rem auto;
                 width: 150px;
                 border-radius: 50%;
+                position: relative;
+                overflow: hidden;
+
+                .after{
+                    position: absolute;
+                    padding-bottom: 1.5rem; 
+                    height: 100%;
+                    width: 100%;
+                    top: 100%;
+                    left: 0;
+                    font-size: 1.2rem;
+                    font-weight: 100;
+                    color: #fff;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-evenly;
+                    background-image: linear-gradient(to top, #000000, #00000000);
+                    z-index: 999;
+                    transition: all .2s ease-in;
+
+                    
+                    i:hover{
+                        color: $lightPrimary;
+                    }
+
+                }
+
+                img{
+                    width: 100%;
+                    transition: all .2s ease-in;
+
+                }
+
+                &:hover .after{
+                    top: 0;
+                }
+
+                &:hover img{
+                    transform: scale(1.1);
+                }
             }
 
             p{

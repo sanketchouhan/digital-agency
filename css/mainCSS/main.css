@@ -17,59 +17,6 @@ body {
   margin: 0;
 }
 
-.overlay {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  background: #191919;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 9999;
-}
-
-.overlay .overlayLogo {
-  width: 10%;
-  -webkit-animation: animateLogo 1s infinite;
-          animation: animateLogo 1s infinite;
-}
-
-@-webkit-keyframes animateLogo {
-  0% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  50% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-}
-
-@keyframes animateLogo {
-  0% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  50% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-}
-
 .navbar-expand-md {
   position: fixed;
   width: 100%;
@@ -268,16 +215,6 @@ body {
   background: #191919;
 }
 
-.btn {
-  width: 25vh;
-  margin: 2rem auto;
-  letter-spacing: .1rem;
-  padding: .5rem 0;
-  background: #e7a220;
-  color: #fff;
-  border-radius: 10rem;
-}
-
 .description {
   margin: 0;
   padding: 5% 0 5% 10%;
@@ -310,6 +247,19 @@ body {
           transform: translateY(50px);
 }
 
+.description .btn {
+  width: 10rem;
+  margin: 1.5rem auto;
+  letter-spacing: .1rem;
+  padding: .5rem 0;
+  background: #e7a220;
+  color: #fff;
+  border-radius: 10rem;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
 .gridContent .icon {
   color: #e7a220;
   display: -webkit-box;
@@ -337,7 +287,6 @@ body {
 
 .creativeTeam {
   padding: 0;
-  min-height: 90vh;
   overflow: hidden;
 }
 
@@ -408,7 +357,6 @@ body {
 .bestTeam {
   background: #191919;
   padding: 0;
-  min-height: 80vh;
   overflow: hidden;
 }
 
@@ -418,17 +366,6 @@ body {
 
 .bestTeam .ourBestTeam p {
   color: #fff;
-}
-
-.bestTeam .ourBestTeam .btn {
-  opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-}
-
-.bestTeam .ourBestTeam .btn:hover {
-  color: #fff;
-  background: #999999;
 }
 
 .bestTeam .teamGallery {
@@ -459,12 +396,59 @@ body {
   opacity: 0;
 }
 
-.bestTeam .teamGallery .row .member img {
+.bestTeam .teamGallery .row .member .img {
   width: 80%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bestTeam .teamGallery .row .member .img .after {
+  position: absolute;
+  padding-bottom: 1rem;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#00000000));
+  background-image: linear-gradient(to top, #000000, #00000000);
+  z-index: 999;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.bestTeam .teamGallery .row .member .img .after i:hover {
+  color: #999999;
+}
+
+.bestTeam .teamGallery .row .member .img img {
+  width: 100%;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.bestTeam .teamGallery .row .member .img:hover .after {
+  top: 0;
+}
+
+.bestTeam .teamGallery .row .member .img:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .bestTeam .teamGallery .row .member h5 {
-  margin: 1.5rem auto 1rem auto;
+  margin: 1rem auto 1rem auto;
   color: #e7a220;
   font-size: 1rem;
   text-transform: uppercase;
@@ -478,7 +462,6 @@ body {
 
 .ourWork {
   padding: 0;
-  min-height: 80vh;
   overflow: hidden;
 }
 
@@ -535,7 +518,6 @@ body {
 .chooseUs {
   background: #191919;
   padding: 0;
-  min-height: 80vh;
   overflow: hidden;
 }
 
@@ -596,7 +578,6 @@ body {
 
 .ourService {
   padding: 0;
-  min-height: 80vh;
   overflow: hidden;
 }
 
@@ -672,7 +653,6 @@ body {
 .ourClient {
   background: #191919;
   padding: 0;
-  min-height: 50vh;
   overflow: hidden;
 }
 
@@ -726,16 +706,6 @@ body {
 
 .getInTouch {
   padding: 5% 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 20vh;
   background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(49, 49, 49, 0.8)), to(rgba(48, 48, 48, 0.8))), url("../../images/mihail-macri-541060-unsplash.jpg");
   background-image: linear-gradient(to right top, rgba(49, 49, 49, 0.8), rgba(48, 48, 48, 0.8)), url("../../images/mihail-macri-541060-unsplash.jpg");
   background-size: cover;
@@ -744,6 +714,7 @@ body {
 
 .getInTouch .getInTouchIcons {
   width: 70%;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -751,14 +722,14 @@ body {
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.5vh;
+  letter-spacing: .2rem;
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
   opacity: 0;
 }
 
 .getInTouch .getInTouchIcons .mediaIcons {
-  font-size: 3.2vh;
+  font-size: 1.5rem;
   font-weight: 100;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -780,9 +751,14 @@ body {
   opacity: 0;
 }
 
+.getInTouch .getInTouchIcons .mediaIcons i:hover {
+  font-size: 1.8rem;
+  background: rgba(25, 25, 25, 0.5);
+  cursor: pointer;
+}
+
 .footer {
   padding: 0;
-  min-height: 30vh;
   background: #191919;
   position: relative;
   overflow: hidden;

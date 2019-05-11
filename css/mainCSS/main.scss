@@ -22,35 +22,6 @@ body{
     margin: 0;
 }
 
-.overlay{
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    background: $primary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    // transform: translateY(-50%);
-    z-index: 9999;
-
-    .overlayLogo{
-        width: 10%;
-        animation: animateLogo 1s infinite;
-    }
-}
-
-@keyframes animateLogo{
-    0%{
-        transform: translateY(10px);
-    }
-    50%{
-        transform: translateY(-10px);
-    }
-    100%{
-        transform: translateY(10px);
-    }
-}
-
  //  navbar section
 .navbar-expand-md{
     position: fixed;
@@ -240,16 +211,6 @@ body{
 
 // shared css
 
-.btn{
-    width: 25vh;
-    margin: 2rem auto;
-    letter-spacing: .1rem;
-    padding: .5rem 0;
-    background: $secondary;
-    color: #fff;
-    border-radius: 10rem;
-}
-
 
 .description{
     margin:0;
@@ -275,6 +236,18 @@ body{
     p{
         color: $primary;
         margin: 1.5rem 0;
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    .btn{
+        width: 10rem;
+        margin: 1.5rem auto;
+        letter-spacing: .1rem;
+        padding: .5rem 0;
+        background: $secondary;
+        color: #fff;
+        border-radius: 10rem;
         opacity: 0;
         transform: translateY(50px);
     }
@@ -305,7 +278,7 @@ body{
 
 .creativeTeam{
     padding: 0;
-    min-height: 90vh;
+    // min-height: 90vh;
     overflow: hidden;
 
     .creativeTeamGallery{
@@ -367,7 +340,7 @@ body{
 .bestTeam{
     background: $primary;
     padding: 0;
-    min-height: 80vh;
+    // min-height: 80vh;
     overflow: hidden;
     .ourBestTeam{
         
@@ -379,14 +352,6 @@ body{
             color: #fff;
         }
 
-        .btn{
-            opacity: 0;
-            transform: translateY(50px);
-            &:hover{
-                color: #fff;
-                background: $lightPrimary;
-            }
-        }
     }
 
     .teamGallery{
@@ -402,11 +367,51 @@ body{
                 transform: translateY(100px);
                 opacity: 0;
 
-                img{
+                .img{
                     width: 80%;
+                    position: relative;
+                    overflow: hidden;
+
+                    .after{
+                        position: absolute;
+                        padding-bottom: 1rem; 
+                        height: 100%;
+                        width: 100%;
+                        top: 100%;
+                        left: 0;
+                        font-size: 1.2rem;
+                        font-weight: 100;
+                        color: #fff;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: space-evenly;
+                        background-image: linear-gradient(to top, #000000, #00000000);
+                        z-index: 999;
+                        transition: all .2s ease-in;
+
+                        
+                        i:hover{
+                            color: $lightPrimary;
+                        }
+
+                    }
+
+                    img{
+                        width: 100%;
+                        transition: all .2s ease-in;
+
+                    }
+
+                    &:hover .after{
+                        top: 0;
+                    }
+
+                    &:hover img{
+                        transform: scale(1.1);
+                    }
                 }
                 h5{
-                    margin: 1.5rem auto 1rem auto;
+                    margin: 1rem auto 1rem auto;
                     color: $secondary;
                     font-size: 1rem;
                     text-transform: uppercase;
@@ -423,6 +428,7 @@ body{
     }
 }
 
+
 // end of our best team section
 
 
@@ -430,7 +436,7 @@ body{
 
 .ourWork{
     padding: 0;
-    min-height: 80vh;
+    // min-height: 80vh;
     overflow: hidden;
    
     .gallery{
@@ -487,7 +493,7 @@ body{
 .chooseUs{
     background: $primary;
     padding: 0;
-    min-height: 80vh;
+    // min-height: 80vh;
     overflow: hidden;
     .photo{
         padding: 0;
@@ -534,7 +540,7 @@ body{
 
 .ourService{
     padding: 0;
-    min-height: 80vh;
+    // min-height: 80vh;
     overflow: hidden;
     .ourBestService{
         padding: 5% 8% 5% 10%;
@@ -602,7 +608,7 @@ body{
 .ourClient{
     background: $primary;
     padding: 0;
-    min-height: 50vh;
+    // min-height: 50vh;
     overflow: hidden;
 
     .ourClientSay{
@@ -657,28 +663,26 @@ body{
 
 .getInTouch{
     padding: 5% 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 20vh;
+    // min-height: 20vh;
     background-image: linear-gradient(to right top, rgba(49, 49, 49, 0.8), rgba(48, 48, 48, 0.8)), url("../../images/mihail-macri-541060-unsplash.jpg");
     background-size: cover;
     background-position: center center;
 
     .getInTouchIcons{
         width: 70%;
+        margin: 0 auto;
         text-align: center;
 
         h1{
             color: #fff;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5vh;
+            letter-spacing: .2rem;
             transform: translateY(50px);
             opacity: 0;
         }
         .mediaIcons{
-            font-size: 3.2vh;
+            font-size: 1.5rem;
             font-weight: 100;
             display: flex;
             justify-content: space-around;
@@ -693,7 +697,16 @@ body{
                 border-radius: 50%;
                 transform: translateY(50px);
                 opacity: 0;
+                // transition: all .3s ease-in;
+
+                &:hover{
+                    font-size: 1.8rem;
+                    background: rgba(25, 25, 25, 0.5);
+                    cursor: pointer;
+                }
             }
+
+             
         }
     }
 }
@@ -704,7 +717,7 @@ body{
 
 .footer{
     padding: 0;
-    min-height: 30vh;
+    // min-height: 30vh;
     background: $primary;
     position: relative;
     overflow: hidden;
