@@ -1,0 +1,369 @@
+$secondary:rgb(231,162,32);
+$primary:rgb(25, 25, 25);
+$lightPrimary : lighten($primary,50%);
+// $darkPrimary: 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Merriweather', serif;
+    font-size: .9rem;
+}
+
+
+// navbar section
+
+.navbar-expand-md{
+    position: fixed;
+    width: 100%;
+    min-height: 5em;
+    z-index: 50;
+    background-image: radial-gradient(circle, #999999f5, #767676f5, #555555f5, #353535f5, #191919f5);
+    transition: all .2s ease;
+
+    .navbar-brand{
+        width: 20%;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    button:focus{
+        outline: none;
+    }
+
+    .toggler-btn{
+        padding: 5px;
+        transition: all 1s ease;
+    }
+    
+    .bar{
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background: #fff;
+        transition: all 0.5s ease;
+    }
+    
+    .change .bar1{
+        transform: translateY(8px) rotate(135deg);
+    }
+    
+    .change .bar2{
+        opacity: 0;
+    }
+    
+    .change .bar3{
+        transform: translateY(-8px) rotate(45deg);
+    }
+
+    .navbar-collapse{
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .navbar-nav{
+        width: 100%;
+        justify-content: space-evenly;
+        .space{
+            width: 30%;
+        }
+
+        a{
+            padding: 10px 20px;
+            text-transform: capitalize;
+            letter-spacing: .15rem;
+            color: rgb(202, 202, 202);
+            transition: all .5s ease;
+
+            &:hover{
+                padding-top: 8px;
+                padding-bottom: 8px;
+                color: #fff;
+                border-top: 2px solid $secondary;
+                border-bottom: 2px solid $secondary;
+            }
+        }
+    }
+}
+
+.head{
+    width: 100%;
+    height: 50vh;
+    padding-top: 5rem;
+    position: relative;
+    background-image: linear-gradient(to right top, rgba(40, 40, 40, 0.8), rgba(40, 40, 40, 0.8)), url("../../images/architecture-boy-buildings-307847.jpg");
+    background-size: cover;
+    color: #fff;
+
+    h1{
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    font-weight: bolder;
+    }
+}
+
+
+.awesomeService{
+    width: 80%;
+    padding: 4rem 0 0 0;
+    text-align: center;
+
+    h1{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .line1{
+        width: 20%;
+        height: .15rem;
+        background: $secondary;
+        margin: .5rem auto;
+    }
+    .line2{
+        width: 15%;
+        height: .1rem;
+        background: $secondary;
+        margin: .5rem auto;
+    }
+    p{
+        margin: 1.5rem 0;
+    }
+
+    .row{
+        margin: 0;
+        padding: 2rem 0;
+        .col-md-6{
+            padding: 1rem 1rem 1rem 2rem;
+            position: relative;
+            text-align: justify;
+
+
+            .services{
+                border: .1rem solid $lightPrimary;
+                .logo{
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    background: $lightPrimary;
+                    padding: .8rem;
+                    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                    color: #fff;
+                }
+    
+                h4{
+                    text-align: center;
+                    margin: 1rem auto 0 auto;
+                    text-transform: capitalize;
+                }
+                p{
+                    padding: 1rem .5rem 1rem 2.5rem;
+                    margin: 0;
+                }
+            }
+
+            
+            &:hover .services{
+                border-color: $secondary;
+                cursor: pointer;
+            }
+
+
+            &:hover .logo{
+                background: $secondary;
+            }
+        }
+    }
+}
+
+.stats{
+    width: 100%;
+    background: $primary;
+
+    .statsContainer{
+        width: 60%;
+        margin: 0 auto;
+        padding: 0;
+        color: #fff;
+
+        .row{
+            margin: 0;
+            padding: 3rem 0;
+
+            .col-6{
+                padding: 1rem;
+                text-align: center;
+                border-right: .1rem solid $secondary;
+
+                &:last-child{
+                    border-right: none;
+                }
+
+                p{
+                    margin: 1rem 0;
+                }
+            }
+
+        }
+    }
+}
+
+.pricingTable{
+    width: 80%;
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+
+    h2{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .line1{
+        width: 20%;
+        height: .15rem;
+        background: $secondary;
+        margin: .5rem auto;
+    }
+    .line2{
+        width: 15%;
+        height: .1rem;
+        background: $secondary;
+        margin: .5rem auto;
+    }
+    p{
+        margin: 1.5rem 0;
+    }
+
+    .row{
+        padding: 0;
+        margin: 0;
+
+        .col-md-4{
+            margin: 0;
+            padding: .5rem;
+
+            .tableContent{
+                border: .1rem solid $lightPrimary;
+
+                .heading{
+                    background: $primary;
+                    color: #fff;
+                    padding: 2rem 0 5rem 0;
+                    h4{
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                    h6{
+                        text-transform: capitalize;
+                    }
+                }
+
+                .content{
+                    position: relative;
+
+                    .price{
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        padding: 1.5rem;
+                        // border: .1rem solid #fff;
+                        background: $secondary;
+                        color: #fff;
+                        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+                        span{
+                            font-size: 1.8rem;
+                        }
+                        .permonth{
+                            font-size: .8rem;
+                        }
+                    }
+
+                    p{
+                        margin: 0;
+                        padding: 1rem 0;
+                        border-top: .05rem solid $lightPrimary;
+                    }
+                    .first{
+                        padding-top: 5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.quote{
+    width: 100%;
+    padding: 4rem 2rem;
+    background-image: linear-gradient(to right top, rgba(40, 40, 40, 0.8), rgba(40, 40, 40, 0.8)), url("../../images/architecture-boy-buildings-307847.jpg");
+    background-size: cover;
+
+    h2{
+        font-weight: bolder;
+        text-transform: capitalize;
+        color: #fff;
+    }
+}
+
+.footerDiv{
+    width: 80%;
+    padding-top: 3rem;
+    hr{
+        margin-bottom: 0;
+    }
+    .footer{
+        .col-12{
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .navElements{
+            a{
+                text-decoration: none;
+                color: $primary;
+            }
+
+            a:hover{
+                color: $lightPrimary;
+            }
+        }
+
+        .mediaIcons{
+            justify-content: space-evenly;
+            font-size: 1rem;
+            font-weight: 100;
+
+            i{
+                height: 2rem;
+                width: 2rem;
+                line-height: 2rem;
+                color: #fff;
+                text-align: center;
+                background: $primary;
+                border-radius: 50%;
+            }
+
+            i:hover{
+                background: $lightPrimary;
+                cursor: pointer;
+            }
+        }
+        
+        .copyright{
+            font-size: .8rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .stats .statsContainer .row .col-6:nth-child(2){
+        border-right: none;
+    }
+}
