@@ -1,0 +1,231 @@
+$secondary:rgb(231,162,32);
+$primary:rgb(25, 25, 25);
+$lightPrimary : lighten($primary,50%);
+// $darkPrimary: 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Merriweather', serif;
+    font-size: .9rem;
+}
+.row{
+    margin: 0;
+    padding: 0;
+}
+.secondary{
+    color: $secondary;
+}
+// navbar section
+.navbar-expand-md{
+    position: fixed;
+    width: 100%;
+    padding: .5rem 5vw;
+    min-height: 5rem;
+    z-index: 50;
+    background-color: #353535;
+
+    .logo{
+        height: 3rem;
+    }
+
+    .navbar-toggler{
+        .fa-bars{
+            color: #fff;
+            font-size: 2rem;
+        }
+    }
+    .navbar-toggler:focus{
+        outline: none;
+    }
+    
+    .navbar-collapse{
+        justify-content: flex-end;
+
+        .nav-item{
+            padding: 0 2rem;
+        }
+        .nav-item.active a{
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: #fff;
+            border-top: 2px solid $secondary;
+            border-bottom: 2px solid $secondary;
+        }
+        a{
+            padding: 10px 20px;
+            text-transform: capitalize;
+            letter-spacing: .15rem;
+            color: #fff;
+            transition: all .5s ease;
+
+            &:hover{
+                padding-top: 8px;
+                padding-bottom: 8px;
+                border-top: 2px solid $secondary;
+                border-bottom: 2px solid $secondary;
+            }
+        }
+
+    }
+}
+
+
+.container{
+    padding-top: 5rem;
+    
+    .aboutTeam{
+        text-align: justify;
+        
+        h1{
+            color: $primary;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin: 4rem auto 2rem auto;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        p{
+            opacity: 0;
+            transform: translateY(50px);
+        }
+    }
+
+    h1{
+        color: $primary;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin: 4rem auto 2rem auto;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    .teamMember{
+        
+        .col-sm-6{
+            text-align: center;
+            margin: 2rem 0;
+            opacity: 0;
+            transform: translateY(50px);
+
+            .img{
+                margin: 0 auto 2rem auto;
+                width: 150px;
+                border-radius: 50%;
+                position: relative;
+                overflow: hidden;
+
+                .after{
+                    position: absolute;
+                    padding-bottom: 1.5rem; 
+                    height: 100%;
+                    width: 100%;
+                    top: 100%;
+                    left: 0;
+                    font-size: 1.2rem;
+                    font-weight: 100;
+                    color: #fff;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-evenly;
+                    background-image: linear-gradient(to top, #000000, #00000000);
+                    z-index: 999;
+                    transition: all .2s ease-in;
+
+
+                    
+                    i:hover{
+                        color: $lightPrimary;
+                        cursor: pointer;
+                    }
+
+                }
+
+                img{
+                    width: 100%;
+                    transition: all .2s ease-in;
+
+                }
+
+                &:hover .after{
+                    top: 0;
+                }
+
+                &:hover img{
+                    transform: scale(1.1);
+                }
+            }
+
+            p{
+                text-align: justify;
+                font-size: .8rem;
+                padding: 1.5rem;
+            }
+        }
+    }
+
+    hr{
+        margin-bottom: 0;
+    }
+    .footer{
+        .col-12{
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .navElements{
+            a{
+                text-decoration: none;
+                color: $primary;
+            }
+
+            a:hover{
+                color: $lightPrimary;
+            }
+        }
+
+        .mediaIcons{
+            justify-content: space-evenly;
+            font-size: 1rem;
+            font-weight: 100;
+
+            i{
+                height: 2rem;
+                width: 2rem;
+                line-height: 2rem;
+                color: #fff;
+                text-align: center;
+                background: $primary;
+                border-radius: 50%;
+            }
+
+            i:hover{
+                background: $lightPrimary;
+                cursor: pointer;
+            }
+        }
+        
+        .copyright{
+            font-size: .8rem;
+        }
+    }
+}
+
+
+@media (max-width: 767px) { 
+
+    .navbar-collapse{
+        justify-content: initial;
+
+        .nav-item{
+            padding: .5rem 0!important;
+        }
+    }
+
+ }

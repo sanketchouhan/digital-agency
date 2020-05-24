@@ -6,53 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/css/all.css">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Russo+One" rel="stylesheet">
-    <link rel="stylesheet" href="css/mainCSS/main.css">
-    <link rel="stylesheet" href="css/mainCSS/mediacss.css">
     <title>Digital Agency</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="stylesheet/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/css/all.css"> -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Russo+One" rel="stylesheet">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/5e26c06771.js" crossorigin="anonymous"></script>
+    <!-- stylesheet  -->
+    <link rel="stylesheet" href="stylesheet/main-stylesheet/main.css">
+    <!-- <link rel="stylesheet" href="css/mainCSS/mediacss.css"> -->
 </head>
 
 <body>
 
-    <div class="navbar navbar-expand-md">
-        <a href="#home" class="navbar-brand">digital</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-            <div class="toggler-btn">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-            </div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#home"><img src="logo-2.png" alt="" class="img-fluid logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
         </button>
 
-        <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="ourTeam.html">Team</a>
+                    <a class="nav-link" href="our-team.html">Team</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="ourService.html">service</a>
-                </li>
-                <li class="space">
+                    <a class="nav-link" href="our-service.html">service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="ourWork.html">Work</a>
+                    <a class="nav-link" href="our-work.html">Work</a>
                 </li>
-                <li class="nav-item">
+                <div class="nav-item">
                     <a class="nav-link" href="#client">clients</a>
-                </li>
-                <li class="nav-item">
+                </div>
+                <div class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
-                </li>
+                </div>
             </ul>
         </div>
-    </div>
+    </nav>
+    <!-- navbar ends -->
 
+    <!-- header -->
     <div class="header" id="home">
+        <div class="header-nav">
+            <div class="link active">
+                <a class="nav-link" href="#home">Home</a>
+            </div>
+            <div class="link">
+                <a class="nav-link" href="our-team.html">Team</a>
+            </div>
+            <div class="link">
+                <a class="nav-link" href="our-service.html">service</a>
+            </div>
+            <div class="space">
+            </div>
+            <div class="link">
+                <a class="nav-link" href="our-work.html">Work</a>
+            </div>
+            <div class="link">
+                <a class="nav-link" href="#client">clients</a>
+            </div>
+            <div class="link">
+                <a class="nav-link" href="#contact">Contact</a>
+            </div>
+        </div>
         <div class="borderBox">
             <div class="content">
                 digital
@@ -68,29 +93,36 @@
 
         <div class="heading">
             <h1>This is the future of<br>web design.</h1>
-            <p>Here I list top 15 best web design blogs in 2017 to help web designers and developers get more latest web
+            <p>Here I list top 15 best web design blogs in 2017 to help web designers and developers get more latest
+                web
                 design
-                trends, information and skills and developers get more latest web design trends, information and skills
+                trends, information and skills and developers get more latest web design trends, information and
+                skills
             </p>
-            <a class="btn" href="#getInTouch">Get In Touch</a>
+            <a class="btn" href="#contact">Get In Touch</a>
         </div>
     </div>
+    <!-- header ends -->
 
-    <div class="creativeTeam container-fluid" id="team">
+    <!-- creative team -->
+    <div class="creative-team container" id="team">
         <div class="row">
-            <div class="col-sm-5 ourCreativeTeam description">
+            <div class="col-sm-5 our-creative-team description">
                 <h1>
                     <span class="secondary">we are</span>
                     <br>Creative
                     <br>team</h1>
                 <div class="line"></div>
                 <p>
-                    Starting us off, we have Smashing Magazine. It’s not often that you find a publication that can put
+                    Starting us off, we have Smashing Magazine. It’s not often that you find a publication that can
+                    put
                     out
                     as many high-quality
-                    articles as consistently as Smashing can. Some places publish lots of articles that have very little
+                    articles as consistently as Smashing can. Some places publish lots of articles that have very
+                    little
                     substance,
-                    but Smashing Magazine makes sure that pretty much every word they publish is relevant to you as a
+                    but Smashing Magazine makes sure that pretty much every word they publish is relevant to you as
+                    a
                     designer
                     and developer. They also do various freebies and host conferences, as well as put out books on
                     topics
@@ -99,8 +131,8 @@
                 </p>
             </div>
             <div class="col-sm-7">
-                <div class="creativeTeamGallery">
-                    <div class="borderBox"></div>
+                <div class="creative-team-gallery">
+                    <!-- <div class="borderBox"></div>
                     <div class="image img1">
                         <img src="images/books-connection-contemporary-459654.jpg" alt="">
                     </div>
@@ -112,135 +144,109 @@
                     </div>
                     <div class="image img4">
                         <img src="images/books-connection-contemporary-459654.jpg" alt="">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- creative team ends -->
+
+    <!-- best team -->
+    <div class="best-team" id="bestTeam">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 our-best-team description">
+                    <h1>
+                        <span class="secondary">Our Best</span>
+                        <br>team</h1>
+                    <div class="line"></div>
+                    <p>
+                        Starting us off, we have Smashing Magazine. It’s not often that you find a publication that
+                        can
+                        put
+                        out
+                        as many high-quality
+                        articles as consistently as Smashing can. Some places publish lots of articles that have
+                        very
+                        little
+                        substance,
+                        but Smashing Magazine makes sure that pretty much every word they publish is relevant to you
+                        as
+                        a
+                        designer
+                        and developer. They also do various freebies and host conferences, as well as put out books
+                        on
+                        topics
+                        across
+                        our field, too.
+                    </p>
+                    <a class="btn team-btn" href="our-team.html">know more...</a>
+                </div>
+                <div class="col-sm-7 team-gallery">
+                    <div class="row">
+                        <div class="col-6 col-md-4 member">
+                            <img src="images/member-1.jpg" alt="" class="img-fluid">
+                            <h5>name here</h5>
+                            <p>occupation here</p>
+                        </div>
+                        <div class="col-6 col-md-4 member">
+                            <img src="images/member-2.jpg" alt="" class="img-fluid">
+                            <h5>name here</h5>
+                            <p>occupation here</p>
+                        </div>
+                        <div class="col-6 col-md-4 member">
+                            <img src="images/member-3.jpg" alt="" class="img-fluid">
+                            <h5>name here</h5>
+                            <p>occupation here</p>
+                        </div>
+                        <div class="col-6 col-md-4 member">
+                            <img src="images/member-4.jpg" alt="" class="img-fluid">
+                            <h5>name here</h5>
+                            <p>occupation here</p>
+                        </div>
+                        <div class="col-6 col-md-4 member">
+                            <img src="images/member-5.jpg" alt="" class="img-fluid">
+                            <h5>name here</h5>
+                            <p>occupation here</p>
+                        </div>
+                        <div class="col-6 col-md-4 member">
+                            <img src="images/member-6.jpg" alt="" class="img-fluid">
+                            <h5>name here</h5>
+                            <p>occupation here</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- best team ends -->
 
-    <div class="bestTeam container-fluid" id="bestTeam">
+    <!-- our work -->
+    <div class="our-work container" id="work">
         <div class="row">
-            <div class="col-sm-5 ourBestTeam description">
-                <h1>
-                    <span class="secondary">Our Best</span>
-                    <br>team</h1>
-                <div class="line"></div>
-                <p>
-                    Starting us off, we have Smashing Magazine. It’s not often that you find a publication that can put
-                    out
-                    as many high-quality
-                    articles as consistently as Smashing can. Some places publish lots of articles that have very little
-                    substance,
-                    but Smashing Magazine makes sure that pretty much every word they publish is relevant to you as a
-                    designer
-                    and developer. They also do various freebies and host conferences, as well as put out books on
-                    topics
-                    across
-                    our field, too.
-                </p>
-                <a class="btn teamBtn" href="ourTeam.html">know more...</a>
-            </div>
-            <div class="col-sm-7 teamGallery">
-                <div class="row">
-                    <div class="col-6 col-md-4 member">
-                        <div class="img">
-                            <img src="images/team.jpg" alt="">
-                            <div class="after">
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook-f"></i>
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                        </div>
-                        <h5>name here</h5>
-                        <p>occupation here</p>
-                    </div>
-                    <div class="col-6 col-md-4 member">
-                        <div class="img">
-                            <img src="images/team.jpg" alt="">
-                            <div class="after">
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook-f"></i>
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                        </div>
-                        <h5>name here</h5>
-                        <p>occupation here</p>
-                    </div>
-                    <div class="col-6 col-md-4 member">
-                        <div class="img">
-                            <img src="images/team.jpg" alt="">
-                            <div class="after">
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook-f"></i>
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                        </div>
-                        <h5>name here</h5>
-                        <p>occupation here</p>
-                    </div>
-                    <div class="col-6 col-md-4 member">
-                        <div class="img">
-                            <img src="images/team.jpg" alt="">
-                            <div class="after">
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook-f"></i>
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                        </div>
-                        <h5>name here</h5>
-                        <p>occupation here</p>
-                    </div>
-                    <div class="col-6 col-md-4 member">
-                        <div class="img">
-                            <img src="images/team.jpg" alt="">
-                            <div class="after">
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook-f"></i>
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                        </div>
-                        <h5>name here</h5>
-                        <p>occupation here</p>
-                    </div>
-                    <div class="col-6 col-md-4 member">
-                        <div class="img">
-                            <img src="images/team.jpg" alt="">
-                            <div class="after">
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook-f"></i>
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                        </div>
-                        <h5>name here</h5>
-                        <p>occupation here</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="ourWork container-fluid" id="work">
-        <div class="row">
-            <div class="col-sm-5 ourCreativeWork description">
+            <div class="col-sm-5 our-creative-work description">
                 <h1>
                     <span class="secondary">Our</span>
                     <br>creative
                     <br>work</h1>
                 <div class="line"></div>
                 <p>
-                    Starting us off, we have Smashing Magazine. It’s not often that you find a publication that can put
+                    Starting us off, we have Smashing Magazine. It’s not often that you find a publication that can
+                    put
                     out
                     as many high-quality
-                    articles as consistently as Smashing can. Some places publish lots of articles that have very little
+                    articles as consistently as Smashing can. Some places publish lots of articles that have very
+                    little
                     substance,
-                    but Smashing Magazine makes sure that pretty much every word they publish is relevant to you as a
+                    but Smashing Magazine makes sure that pretty much every word they publish is relevant to you as
+                    a
                     designer
                     and developer. They also do various freebies and host conferences, as well as put out books on
                     topics
                     across
                     our field, too.
                 </p>
-                <a class="btn workBtn" href="ourWork.html">know more...</a>
+                <a class="btn work-btn" href="our-work.html">know more...</a>
             </div>
             <div class="col-sm-7">
                 <div class="gallery">
@@ -252,141 +258,172 @@
             </div>
         </div>
     </div>
+    <!-- our work ends -->
 
-    <div class="chooseUs container-fluid" id="chooseUs">
-        <div class="row">
-            <div class="col-sm-6 photo">
-                <img src="images/black-coffee-cellphone-cup-875514.jpg" alt="">
-            </div>
-            <div class="col-sm-6  whyChooseUs description">
-                <h1>
-                    <span class="secondary">why</span>
-                    <br>choose us</h1>
-                <div class="line"></div>
-                <div class="whyChooseUsContent gridContent">
-                    <div class="icon">
-                        <i class="far fa-flag fa-3x"></i>
+    <!-- choose us -->
+    <div class="choose-us" id="chooseUs">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 photo">
+                    <div class="photo-div">
                     </div>
-                    <div class="text">
-                        <h5>They also do various freebies and host</h5>
-                        <p> Starting us off, we have Smashing Magazine. It’s not often that you find a publication that
-                            can
-                            put out
-                            as many high-quality articles as consistently as Smashing can.</p>
-                    </div>
-                    <div class="icon">
-                        <i class="fas fa-desktop fa-3x"></i>
-                    </div>
-                    <div class="text">
-                        <h5>They also do various freebies and host</h5>
-                        <p> Starting us off, we have Smashing Magazine. It’s not often that you find a publication that
-                            can
-                            put out
-                            as many high-quality articles as consistently as Smashing can.</p>
-                    </div>
-                    <div class="icon">
-                        <i class="fas fa-headset fa-3x"></i>
-                    </div>
-                    <div class="text">
-                        <h5>They also do various freebies and host</h5>
-                        <p> Starting us off, we have Smashing Magazine. It’s not often that you find a publication that
-                            can
-                            put out
-                            as many high-quality articles as consistently as Smashing can.</p>
+                </div>
+                <div class="col-sm-6  why-choose-us description">
+                    <h1>
+                        <span class="secondary">why</span>
+                        <br>choose us</h1>
+                    <div class="line"></div>
+                    <div class="why-choose-us-content">
+                        <div class="row">
+                            <div class="col-2 icon">
+                                <i class="far fa-flag"></i>
+                            </div>
+                            <div class="col-10 text">
+                                <h5>They also do various freebies and host</h5>
+                                <p> Starting us off, we have Smashing Magazine. It’s not often that you find a
+                                    publication
+                                    that
+                                    can
+                                    put out
+                                    as many high-quality articles as consistently as Smashing can.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <div class="col-10 text">
+                                <h5>They also do various freebies and host</h5>
+                                <p> Starting us off, we have Smashing Magazine. It’s not often that you find a
+                                    publication
+                                    that
+                                    can
+                                    put out
+                                    as many high-quality articles as consistently as Smashing can.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="col-10 text">
+                                <h5>They also do various freebies and host</h5>
+                                <p> Starting us off, we have Smashing Magazine. It’s not often that you find a
+                                    publication
+                                    that
+                                    can
+                                    put out
+                                    as many high-quality articles as consistently as Smashing can.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- choose us ends -->
 
-    <div class="ourService  container-fluid" id="service">
+    <!-- our service -->
+    <div class="our-service  container-fluid" id="service">
         <div class="row">
-            <div class="col-sm-5 ourBestService description">
+            <div class="col-sm-5 our-best-service description">
                 <h1>
                     <span class="secondary">Our</span>
                     <br>best
                     <br>services</h1>
                 <div class="line"></div>
                 <p>
-                    Starting us off, we have Smashing Magazine. It’s not often that you find a publication that can put
+                    Starting us off, we have Smashing Magazine. It’s not often that you find a publication that can
+                    put
                     out
                     as many high-quality
-                    articles as consistently as Smashing can. Some places publish lots of articles that have very little
+                    articles as consistently as Smashing can. Some places publish lots of articles that have very
+                    little
                     substance,
-                    but Smashing Magazine makes sure that pretty much every word they publish is relevant to you as a
+                    but Smashing Magazine makes sure that pretty much every word they publish is relevant to you as
+                    a
                     designer
                     and developer. They also do various freebies and host conferences, as well as put out books on
                     topics
                     across
                     our field, too.
                 </p>
-                <a class="btn serviceBtn" href="ourService.html">know more...</a>
+                <a class="btn service-btn" href="our-service.html">know more...</a>
             </div>
-            <div class="col-sm-7 ourServicePhoto">
-                <div class="ourServiceDesc gridContent">
-                    <div class="descContent">
-                        <div class="icon icon-border">
-                            <i class="fas fa-share-alt fa-2x"></i>
+            <div class="col-sm-7 our-service-photo">
+                <div class="our-service-desc">
+                    <div class="row">
+                        <div class="col-6 desc-content">
+                            <div class="icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <div class="text">
+                                <h5>They also do various freebies</h5>
+                                <p> Starting us off, we have Smashing Magazine. It’s not often that you find a
+                                    publication
+                                    that
+                                    can put
+                                    out as many high-quality articles as consistently as Smashing can.</p>
+                            </div>
                         </div>
-                        <div class="text">
-                            <h5>They also do various freebies</h5>
-                            <p> Starting us off, we have Smashing Magazine. It’s not often that you find a publication
-                                that
-                                can put
-                                out as many high-quality articles as consistently as Smashing can.</p>
+                        <div class="col-6 desc-content">
+                            <div class="icon">
+                                <i class="fas fa-share-square"></i>
+                            </div>
+                            <div class="text">
+                                <h5>They also do various freebies</h5>
+                                <p> Starting us off, we have Smashing Magazine. It’s not often that you find a
+                                    publication
+                                    that
+                                    can put
+                                    out as many high-quality articles as consistently as Smashing can.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="descContent">
-                        <div class="icon icon-border">
-                            <i class="fas fa-share-square fa-2x"></i>
+                        <div class="col-6 desc-content">
+                            <div class="icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="text">
+                                <h5>They also do various freebies</h5>
+                                <p> Starting us off, we have Smashing Magazine. It’s not often that you find a
+                                    publication
+                                    that
+                                    can put
+                                    out as many high-quality articles as consistently as Smashing can.</p>
+                            </div>
                         </div>
-                        <div class="text">
-                            <h5>They also do various freebies</h5>
-                            <p> Starting us off, we have Smashing Magazine. It’s not often that you find a publication
-                                that
-                                can put
-                                out as many high-quality articles as consistently as Smashing can.</p>
-                        </div>
-                    </div>
-                    <div class="descContent">
-                        <div class="icon  icon-border">
-                            <i class="fas fa-cogs fa-2x"></i>
-                        </div>
-                        <div class="text">
-                            <h5>They also do various freebies</h5>
-                            <p> Starting us off, we have Smashing Magazine. It’s not often that you find a publication
-                                that
-                                can put
-                                out as many high-quality articles as consistently as Smashing can.</p>
-                        </div>
-                    </div>
-                    <div class="descContent">
-                        <div class="icon icon-border">
-                            <i class="fas fa-chart-line fa-2x"></i>
-                        </div>
-                        <div class="text">
-                            <h5>They also do various freebies</h5>
-                            <p> Starting us off, we have Smashing Magazine. It’s not often that you find a publication
-                                that
-                                can put
-                                out as many high-quality articles as consistently as Smashing can.</p>
+                        <div class="col-6 desc-content">
+                            <div class="icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="text">
+                                <h5>They also do various freebies</h5>
+                                <p> Starting us off, we have Smashing Magazine. It’s not often that you find a
+                                    publication
+                                    that
+                                    can put
+                                    out as many high-quality articles as consistently as Smashing can.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- our service ends -->
 
-    <div class="ourClient container-fluid" id="client">
+    <!-- our client -->
+    <div class="our-client container-fluid" id="client">
         <div class="row">
-            <div class="col-sm-6 col-md-4 ourClientSay description">
+            <div class="col-sm-6 col-md-4 our-client-say description">
                 <h1>
                     <span class="secondary">our</span>
                     <br>client say</h1>
                 <div class="line"></div>
                 <p>
                     <i class="fas fa-quote-left fa-2x"></i>
-                    Starting us off, we have Smashing Magazine. It’s not often that you find a publication that can put
+                    Starting us off, we have Smashing Magazine. It’s not often that you find a publication that can
+                    put
                     out
                     as many high-quality
                     articles as consistently as Smashing can.
@@ -394,15 +431,16 @@
                 <br>
                 <p>
                     <i class="fas fa-quote-left fa-2x"></i>
-                    Some places publish lots of articles that have very little substance, but Smashing Magazine makes
+                    Some places publish lots of articles that have very little substance, but Smashing Magazine
+                    makes
                     sure
                     that pretty much every
                     word they publish is relevant to you as a designer and developer.
                 </p>
             </div>
-            <div class="col-sm-6 col-md-4 clientPhoto">
+            <div class="col-md-4 client-photo">
             </div>
-            <div class="col-md-4 clientComment">
+            <div class="col-sm-6 col-md-4 client-comment">
                 <div id="slider" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#slider" data-slide-to="0" class="active"></li>
@@ -416,7 +454,8 @@
                                 <p>Starting us off, we have Smashing Magazine. It’s not often that you find a
                                     publication
                                     that can
-                                    put out as many high-quality articles as consistently as Smashing can.</p><br><br>
+                                    put out as many high-quality articles as consistently as Smashing can.</p>
+                                <br><br>
                                 <h3>someone here</h3>
                             </div>
                         </div>
@@ -427,7 +466,8 @@
                                 <p>Starting us off, we have Smashing Magazine. It’s not often that you find a
                                     publication
                                     that can
-                                    put out as many high-quality articles as consistently as Smashing can.</p><br><br>
+                                    put out as many high-quality articles as consistently as Smashing can.</p>
+                                <br><br>
                                 <h3>someone here</h3>
                             </div>
                         </div>
@@ -438,7 +478,8 @@
                                 <p>Starting us off, we have Smashing Magazine. It’s not often that you find a
                                     publication
                                     that can
-                                    put out as many high-quality articles as consistently as Smashing can.</p><br><br>
+                                    put out as many high-quality articles as consistently as Smashing can.</p>
+                                <br><br>
                                 <h3>someone here</h3>
                             </div>
                         </div>
@@ -447,75 +488,81 @@
             </div>
         </div>
     </div>
+    <!-- our client ends-->
 
-    <div class="getInTouch" id="contact">
-        <div class="getInTouchIcons">
-            <h1>
-                <span class="secondary">get</span> in touch</h1>
-            <div class="mediaIcons">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-google-plus-g"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-youtube"></i>
-                <i class="fab fa-linkedin-in"></i>
-                <i class="fab fa-twitter"></i>
+    <!-- get in touch -->
+    <div class="get-in-touch" id="contact">
+        <h1><span class="secondary">get</span> in touch</h1>
+        <div class="mediaIcons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-google-plus-g"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+    </div>
+    <!-- get in touch ends -->
+
+    <!-- footer -->
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-content">
+                    <div class="row">
+                        <div class="col-2 icon">
+                            <i class="far fa-envelope fa-2x"></i>
+                        </div>
+                        <div class="col-10 text">
+                            <h5>Email</h5>
+                            
+                            <ul>
+                                <li>sanket.chouhan555@gmail.com</li>
+                                <li>sanket.chouhan666@gmail.com</li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-content">
+                    <div class="row">
+                        <div class="col-2 icon">
+                            <i class="fas fa-phone  fa-2x"></i>
+                        </div>
+                        <div class="col-10 text">
+                            <h5>Phone</h5>
+                            <ul>
+                                <li>sanket.chouhan555@gmail.com</li>
+                                <li>sanket.chouhan666@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-content">
+                    <div class="row">
+                        <div class="col-2 icon">
+                            <i class="fas fa-map-marked-alt fa-2x"></i>
+                        </div>
+                        <div class="col-10 text">
+                            <h5>Location</h5>
+                            <ul>
+                                <li>sanket.chouhan555@gmail.com</li>
+                                <li>sanket.chouhan666@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="borderBox">
+                <div class="content">
+                    Designed by : Sanket
+                    <br>&copy; Copyright 2019
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="footer container-fluid" id="footer">
-        <div class="row footerContent  gridContent">
-            <div class="col-lg-4 col-md-6 message f-content">
-                <div class="icon">
-                    <i class="far fa-envelope fa-2x"></i>
-                </div>
-                <div class="text">
-                    <h5>email</h5>
-                    <p>
-                        <ul>
-                            <li>sanket.chouhan555@gmail.com</li>
-                            <li>sanket.chouhan666@gmail.com</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4  col-md-6 phone  f-content">
-                <div class="icon">
-                    <i class="fas fa-phone  fa-2x"></i>
-                </div>
-                <div class="text">
-                    <h5>Phone</h5>
-                    <p>
-                        <ul>
-                            <li>sanket.chouhan555@gmail.com</li>
-                            <li>sanket.chouhan666@gmail.com</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4  col-md-6 location  f-content">
-                <div class="icon">
-                    <i class="fas fa-map-marked-alt fa-2x"></i>
-                </div>
-                <div class="text">
-                    <h5>location</h5>
-                    <p>
-                        <ul>
-                            <li>sanket.chouhan555@gmail.com</li>
-                            <li>sanket.chouhan666@gmail.com</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="borderBox">
-            <div class="content">
-                Designed by : Sanket
-                <br>&copy; Copyright 2019
-            </div>
-        </div>
-    </div>
+    <!-- footer ends -->
 
     <script src="javascript/jquery-3.3.1.min.js"></script>
     <script src="javascript/bootstrap.bundle.min.js"></script>
